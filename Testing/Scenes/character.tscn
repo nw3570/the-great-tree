@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://devv4jdgbqjpt"]
+
+[ext_resource type="Script" uid="uid://cmgwhu7wxbnvt" path="res://Class_Scripts/character_class.gd" id="1_dwdmk"]
+[ext_resource type="Texture2D" uid="uid://dm5wr81f2a3i" path="res://pixil-frame-0.png" id="3_p4gct"]
+
+[sub_resource type="Animation" id="Animation_ctwg6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_blccq"]
+resource_name = "Wobble"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.2617994, -0.2617994, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p4gct"]
+_data = {
+&"RESET": SubResource("Animation_ctwg6"),
+&"Wobble": SubResource("Animation_blccq")
+}
+
+[node name="CHARACTER" type="CharacterBody2D" unique_id=1652545502]
+scale = Vector2(0.23572865, 0.23572865)
+script = ExtResource("1_dwdmk")
+metadata/_custom_type_script = "uid://cmgwhu7wxbnvt"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2108171126 groups=["object_sprite"]]
+texture = ExtResource("3_p4gct")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1338139247]
+libraries/ = SubResource("AnimationLibrary_p4gct")

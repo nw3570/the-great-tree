@@ -74,9 +74,6 @@ func move():
 	var Randomizer : RandomNumberGenerator = RandomNumberGenerator.new()
 	var ran_rot : int = Randomizer.randi_range(-10,10)
 	var ran_scaler : float = Randomizer.randf_range(1.05, 1.2)
-	
-	var target_rotation = original_rotation + ran_rot
-	var target_scale = original_scale * ran_scaler
 	rotation_degrees = rotation_degrees + ran_rot
 	scale = scale * ran_scaler
 

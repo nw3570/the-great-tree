@@ -24,6 +24,7 @@ window/stretch/aspect="expand"
 
 game_object=""
 object_sprite=""
+character=""
 
 [input]
 
