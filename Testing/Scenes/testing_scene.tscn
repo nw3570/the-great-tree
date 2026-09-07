@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ck4u0xpmmkub1"]
+
+[ext_resource type="Script" uid="uid://c0qk6h1uslhkt" path="res://Testing/testing_scene.gd" id="1_leg4p"]
+[ext_resource type="PackedScene" uid="uid://dp3h2yakcelh" path="res://Testing/Scenes/test_object.tscn" id="2_tbog4"]
+[ext_resource type="PackedScene" uid="uid://qqsd43stg54w" path="res://Testing/Scenes/face.tscn" id="3_vfkow"]
+
+[node name="TestingScene" type="Node2D" unique_id=154028671]
+script = ExtResource("1_leg4p")
+
+[node name="TestObject" parent="." unique_id=2024803525 instance=ExtResource("2_tbog4")]
+position = Vector2(195, 176)
+
+[node name="FACE" parent="." unique_id=1461031438 instance=ExtResource("3_vfkow")]
+position = Vector2(595, 383)

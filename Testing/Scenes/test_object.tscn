@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dp3h2yakcelh"]
+
+[ext_resource type="Texture2D" uid="uid://dnqt3esesko72" path="res://icon.svg" id="1_bw4sc"]
+[ext_resource type="Script" uid="uid://b06wkrm0gq5ea" path="res://Class_Scripts/object_class.gd" id="1_gtfwv"]
+
+[node name="TestObject" type="StaticBody2D" unique_id=1401354496 groups=["game_object"]]
+script = ExtResource("1_gtfwv")
+metadata/_custom_type_script = "uid://b06wkrm0gq5ea"
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1308764763]
+texture = ExtResource("1_bw4sc")
