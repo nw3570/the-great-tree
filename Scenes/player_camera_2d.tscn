@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://cqd08a36up0nk"]
 
-[ext_resource type="Script" uid="uid://6xd5y1u8khlb" path="res://Scripts/player_camera_2d.gd" id="1_grtey"]
+[ext_resource type="Script" uid="uid://dbnkkrkohg788" path="res://Scripts/player_camera_2d.gd" id="1_grtey"]
+[ext_resource type="PackedScene" uid="uid://ck4u0xpmmkub1" path="res://Testing/Scenes/testing_scene.tscn" id="2_8xrly"]
 
 [node name="PlayerCamera2D" type="Camera2D" unique_id=922877125]
 limit_enabled = false
 position_smoothing_enabled = true
 script = ExtResource("1_grtey")
+
+[node name="TestingScene" parent="." unique_id=154028671 instance=ExtResource("2_8xrly")]
+position = Vector2(-267, -193)

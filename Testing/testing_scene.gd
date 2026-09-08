@@ -16,4 +16,3 @@ func _connect_objects():
 
 func _object_clicked(object_id : String): 
 	print("Interacted with "+object_id)
-	# Interaction code
