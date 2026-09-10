@@ -1,23 +1,24 @@
 extends Camera2D
+class_name PlayerCamera2D
 
-# Margin used to detect if the mouse pointer is on an edge of the screen, in
-# pixels.
+## Margin used to detect if the mouse pointer is on an edge of the screen, in
+## pixels.
 @export var edge_margin := 100.0
 
-# Speed which the camera will move, in pixels/sec.
+## Speed which the camera will move, in pixels/sec.
 @export var pan_speed := 500.0
 
-# Extra distance the camera is allowed to move beyond the limits before being
-# clamped, for horizontal and vertical directions, in pixels.
-# 0 means the camera stops exactly when the screen's edge touches the 
-# limits. Increasing the value will give the camera some breathing 
-# room, if there is padding or fallback art around the limits.
+## Extra distance the camera is allowed to move beyond the limits before being
+## clamped, for horizontal and vertical directions, in pixels.
+## 0 means the camera stops exactly when the screen's edge touches the 
+## limits. Increasing the value will give the camera some breathing 
+## room, if there is padding or fallback art around the limits.
 @export var pan_range := Vector2.ZERO
 
 # Minimum and maximum positions the camera's center (global_position) can go to.
 # Must be defined for the _process method to work, in world pixels.
-var min_position: Vector2
-var max_position: Vector2
+var _min_position: Vector2
+var _max_position: Vector2
 
 #func _ready() -> void:
 	#pan_range = Vector2(100.0, 100.0)
@@ -26,17 +27,17 @@ var max_position: Vector2
 # Updates the camera position based on the mouse position near the border of the
 # screen.
 func _process(delta: float) -> void:
-	var pan_direction = pan_direction_from_mouse_position()	
+	var pan_direction = _pan_direction_from_mouse_position()	
 	
 	global_position += pan_speed * pan_direction.normalized() * delta
-	global_position = global_position.clamp(min_position, max_position)
+	global_position = global_position.clamp(_min_position, _max_position)
 
-# Sets min_position and max_positon based on a background's dimensions and
-# origin, given that the origin is the background's left upper corner.
+## Sets _min_position and max_positon based on a background's dimensions and
+## origin, given that the origin is the background's left upper corner.
 #
-# Intended use is to readjust the camera movement to different environment 
-# scenes that might have different dimensions or visible portions.
-func set_bounds(bg_size: Vector2, bg_origin: Vector2 = Vector2.ZERO) -> void:
+## Intended use is to readjust the camera movement to different environment 
+## scenes that might have different dimensions or visible portions.
+func set_bounds(bg_rect: Rect2) -> void:
 	# Since the camera's global_position is at the center of the screen, this is
 	# the distance from its center to each screen edge. It is used to calculate
 	# how close the camera's center can get to the background's edges without
@@ -46,15 +47,15 @@ func set_bounds(bg_size: Vector2, bg_origin: Vector2 = Vector2.ZERO) -> void:
 	# Limits for the camera's center, keeping the visible screen inside the
 	# background. pan_range expands these limits by the given amount, so the
 	# camera can move more freely.
-	min_position = bg_origin + half_visible_area - pan_range
-	max_position = bg_origin + bg_size - half_visible_area + pan_range
+	_min_position = bg_rect.position + half_visible_area - pan_range
+	_max_position = bg_rect.end - half_visible_area + pan_range
 
-# Calculates the direction vector for the camera movement, based on the current
-# mouse position and edge_margin. 
+## Calculates the direction vector for the camera movement, based on the current
+## mouse position and edge_margin. 
 #
-# If the mouse is in the area near the borders defined by edge_margin, the
-# camera should move in the mouse's direction.
-func pan_direction_from_mouse_position() -> Vector2:
+## If the mouse is in the area near the borders defined by edge_margin, the
+## camera should move in the mouse's direction.
+func _pan_direction_from_mouse_position() -> Vector2:
 	var viewport_size = get_viewport().get_visible_rect().size
 	var mouse_pos = get_viewport().get_mouse_position()	
 	var direction = Vector2.ZERO
