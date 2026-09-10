@@ -2,16 +2,16 @@ extends Node2D
 class_name Room
 
 ## Reference to the backgroun sprite/image of the room scene.
-@export var background: Sprite2D
+var background: Sprite2D
 #@onready var background: Sprite2D = $Background
 
 #var game_context: GameContext = null
-#var navigator: Navigator = null
+var navigator: RoomNavigator = null
 
 func _ready() -> void:
 	assert(background != null, "Room is missing 'Background (Sprite2D)' node")
 	
-	# For all objects in this room, pass onto them the object_interacted signal.
+	# For all objects in this room, connect to the interaction signal.
 	#for game_object in get_tree().get_nodes_in_group("game_object"):
 		#if game_object.mouse_clicked:
 			#game_object.mouse_clicked.connect(_on_object_interacted)
