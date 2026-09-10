@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://de3eltg0cwkjd"]
+
+[ext_resource type="Script" uid="uid://d4aadtqtamtfk" path="res://Scripts/gameplay.gd" id="1_hf1ha"]
+[ext_resource type="Script" uid="uid://dbnkkrkohg788" path="res://Scripts/player_camera_2d.gd" id="2_wbxth"]
+
+[node name="Gameplay" type="Node" unique_id=928970287]
+script = ExtResource("1_hf1ha")
+
+[node name="PlayerCamera2D" type="Camera2D" parent="." unique_id=1628826662]
+script = ExtResource("2_wbxth")
+metadata/_custom_type_script = "uid://dbnkkrkohg788"
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1315036882]
