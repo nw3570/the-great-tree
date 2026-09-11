@@ -6,6 +6,10 @@ const TEST_SHADER = preload("uid://10heid8b4wnb")
 signal icon_found
 signal mouse_clicked(object_id : String)
 
+@export var tooltip_text : String = ""
+@export var tooltip_offset : Vector2 = Vector2(0, -100)
+var tooltip_label : Label
+
 var original_scale : Vector2
 var sprite : Sprite2D
 var selected : bool
@@ -13,6 +17,7 @@ var object_id : String
 var original_rotation
 
 func _ready() -> void:
+	tooltip_text = "TOOL TIP"
 	add_to_group("game_object")
 	object_id = name
 	object_id = object_id.to_upper()
@@ -36,16 +41,38 @@ func _init() -> void:
 func _mouse_entered():
 	selected = true
 	_highlight()
+	_show_tooltip()
 	move()
 
 func _mouse_exited():
 	selected = false
 	_un_highlight()
+	_hide_tooltip()
 	reset()
 
 func _input(event: InputEvent) -> void:
 	if (event.is_action_pressed("LMB") && selected):
 		emit_signal("mouse_clicked", object_id)
+
+func _show_tooltip():
+	if tooltip_text.is_empty():
+		return
+	if !tooltip_label:
+		tooltip_label = Label.new()
+		tooltip_label.name = "TOOLTIP"
+		tooltip_label.z_index = 100
+		
+		add_child(tooltip_label)
+	tooltip_label.text = tooltip_text
+	tooltip_label.scale = scale
+	tooltip_label.z_index = 1
+	tooltip_label.position = Vector2(sprite.scale.x, ((sprite.texture.get_size().y ))*-.8)
+
+func _hide_tooltip():
+	pass
+	#if tooltip_label:
+		#tooltip_label.queue_free()
+		#tooltip_label = null
 
 func _un_highlight():
 	var highlight_node : Sprite2D

@@ -16,6 +16,7 @@ var animation_player : AnimationPlayer
 
 
 func _ready() -> void:
+	scale = scale *4
 	add_to_group("character")
 	for child in get_children():
 		if !child.is_in_group("object_sprite"): continue

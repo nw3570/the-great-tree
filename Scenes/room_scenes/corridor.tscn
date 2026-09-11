@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://coo7tyiw7xvue"]
 
-[ext_resource type="Script" uid="uid://20f5ekkg0fki" path="res://Scripts/corridor.gd" id="1_lmla5"]
+[ext_resource type="Script" uid="uid://dsa7bdvgghm1v" path="res://Scripts/corridor.gd" id="1_lmla5"]
 [ext_resource type="Texture2D" uid="uid://b17b1pw8xmcqk" path="res://Visuals/V1/Corridor.png" id="2_lmla5"]
-[ext_resource type="Script" uid="uid://co6tirury88ug" path="res://Scripts/passage.gd" id="3_5xqk5"]
-[ext_resource type="Script" uid="uid://6d3beus1ff8h" path="res://Scripts/room_door.gd" id="4_7dj21"]
+[ext_resource type="Script" uid="uid://bqlosof5e6wgy" path="res://Scripts/passage.gd" id="3_5xqk5"]
+[ext_resource type="Script" uid="uid://i8ap3ep8g3h3" path="res://Scripts/room_door.gd" id="4_7dj21"]
+[ext_resource type="Script" uid="uid://d0a6uw7rqwjok" path="res://Class Scripts/door_class.gd" id="5_juxwv"]
+[ext_resource type="Texture2D" uid="uid://cyv6r5t2ymckt" path="res://black_screen.png" id="6_k6eco"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6eco"]
 size = Vector2(103, 106)
@@ -11,9 +13,60 @@ size = Vector2(103, 106)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_juxwv"]
 size = Vector2(96.5, 203)
 
+[sub_resource type="Animation" id="Animation_k6eco"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("dimmer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_57p7w"]
+resource_name = "fade_back"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("dimmer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.7058824), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5v1ds"]
+resource_name = "fade_to"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("dimmer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.7058824)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ovwtt"]
+_data = {
+&"RESET": SubResource("Animation_k6eco"),
+&"fade_back": SubResource("Animation_57p7w"),
+&"fade_to": SubResource("Animation_5v1ds")
+}
+
 [node name="Corridor" type="Node2D" unique_id=1489738556]
 script = ExtResource("1_lmla5")
-metadata/_custom_type_script = "uid://cxy6ct5krn8a3"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1030798321]
 position = Vector2(576.00006, 322)
@@ -28,8 +81,78 @@ position = Vector2(576, 269)
 shape = SubResource("RectangleShape2D_k6eco")
 
 [node name="RoomDoor" type="Area2D" parent="." unique_id=606012523]
+position = Vector2(-269, -1)
 script = ExtResource("4_7dj21")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoomDoor" unique_id=1648168575]
 position = Vector2(88, 352.5)
 shape = SubResource("RectangleShape2D_juxwv")
+
+[node name="teen_door" type="StaticBody2D" parent="." unique_id=1467247697]
+position = Vector2(86, 295)
+script = ExtResource("5_juxwv")
+metadata/_custom_type_script = "uid://d0a6uw7rqwjok"
+
+[node name="Area2D" type="Area2D" parent="teen_door" unique_id=792351295]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="teen_door/Area2D" unique_id=1330702220]
+polygon = PackedVector2Array(-85, 306, 88, 210, 86, -287, -82, -337)
+
+[node name="goth_door" type="StaticBody2D" parent="." unique_id=716562462]
+position = Vector2(283, 277)
+script = ExtResource("5_juxwv")
+metadata/_custom_type_script = "uid://d0a6uw7rqwjok"
+
+[node name="Area2D" type="Area2D" parent="goth_door" unique_id=186579184]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="goth_door/Area2D" unique_id=691306763]
+polygon = PackedVector2Array(-49, 189, 59, 143, 53, -169, -49, -236)
+
+[node name="buisness_door" type="StaticBody2D" parent="." unique_id=1904026414]
+position = Vector2(412, 266)
+script = ExtResource("5_juxwv")
+metadata/_custom_type_script = "uid://d0a6uw7rqwjok"
+
+[node name="Area2D" type="Area2D" parent="buisness_door" unique_id=423401631]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="buisness_door/Area2D" unique_id=403551113]
+polygon = PackedVector2Array(-28, 117, 24, 90, 28, -93, -29, -118)
+
+[node name="divorced_door" type="StaticBody2D" parent="." unique_id=1829844726]
+position = Vector2(737, 260)
+script = ExtResource("5_juxwv")
+metadata/_custom_type_script = "uid://d0a6uw7rqwjok"
+
+[node name="Area2D" type="Area2D" parent="divorced_door" unique_id=320383534]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="divorced_door/Area2D" unique_id=897983387]
+polygon = PackedVector2Array(-25, 93, 34, 126, 34, -115, -24, -86)
+
+[node name="archeologist_door" type="StaticBody2D" parent="." unique_id=589752951]
+position = Vector2(853, 255)
+script = ExtResource("5_juxwv")
+metadata/_custom_type_script = "uid://d0a6uw7rqwjok"
+
+[node name="Area2D" type="Area2D" parent="archeologist_door" unique_id=140761496]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="archeologist_door/Area2D" unique_id=2075615874]
+polygon = PackedVector2Array(-37, 155, 62, 213, 65, -210, -35, -149)
+
+[node name="old_door" type="StaticBody2D" parent="." unique_id=100790719]
+position = Vector2(1046, 258)
+script = ExtResource("5_juxwv")
+metadata/_custom_type_script = "uid://d0a6uw7rqwjok"
+
+[node name="Area2D" type="Area2D" parent="old_door" unique_id=1066927803]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="old_door/Area2D" unique_id=1269914447]
+polygon = PackedVector2Array(-72, 242, 101, 342, 102, -301, -73, -255)
+
+[node name="dimmer" type="Sprite2D" parent="." unique_id=330775813]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(585, 324)
+scale = Vector2(52.8125, 32.25)
+texture = ExtResource("6_k6eco")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1582494099]
+libraries/ = SubResource("AnimationLibrary_ovwtt")

@@ -10,7 +10,7 @@ func _ready() -> void:
 func _on_input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if event is not InputEventMouseButton && !event.is_action_pressed("LMB"):
 		return
-	
+
 	if _knock():
 		#go_to_room(destination_room_id)
 		pass

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b2ivrppvmkcgm"]
+
+[ext_resource type="PackedScene" uid="uid://coo7tyiw7xvue" path="res://Scenes/room_scenes/corridor.tscn" id="1_g2pra"]
+[ext_resource type="PackedScene" uid="uid://cqd08a36up0nk" path="res://Scenes/player_camera_2d.tscn" id="2_kls1r"]
+
+[node name="game" type="Node2D" unique_id=68686680]
+
+[node name="Corridor" parent="." unique_id=1489738556 instance=ExtResource("1_g2pra")]
+position = Vector2(5, -8)
+
+[node name="PlayerCamera2D" parent="." unique_id=922877125 instance=ExtResource("2_kls1r")]
+position = Vector2(578, 317)

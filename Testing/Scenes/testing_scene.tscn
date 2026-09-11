@@ -3,26 +3,12 @@
 [ext_resource type="Script" uid="uid://c0qk6h1uslhkt" path="res://Testing/testing_scene.gd" id="1_leg4p"]
 [ext_resource type="PackedScene" uid="uid://dp3h2yakcelh" path="res://Testing/Scenes/test_object.tscn" id="2_tbog4"]
 [ext_resource type="PackedScene" uid="uid://qqsd43stg54w" path="res://Testing/Scenes/face.tscn" id="3_vfkow"]
-[ext_resource type="PackedScene" uid="uid://devv4jdgbqjpt" path="res://Testing/Scenes/character.tscn" id="4_tbog4"]
-[ext_resource type="Texture2D" uid="uid://dnqt3esesko72" path="res://icon.svg" id="5_vfkow"]
 
 [node name="TestingScene" type="Node2D" unique_id=154028671]
 script = ExtResource("1_leg4p")
 
 [node name="TestObject" parent="." unique_id=2024803525 instance=ExtResource("2_tbog4")]
-position = Vector2(-145, 290)
+position = Vector2(484, 275)
 
 [node name="FACE" parent="." unique_id=1461031438 instance=ExtResource("3_vfkow")]
-position = Vector2(1576, 182.00002)
-
-[node name="CHARACTER" parent="." unique_id=1652545502 instance=ExtResource("4_tbog4")]
-position = Vector2(509, 210)
-scale = Vector2(0.12853894, 0.13023421)
-
-[node name="dialogue_speaker_marker" type="Marker2D" parent="." unique_id=1308181956]
-position = Vector2(1013, 414)
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=1435793021]
-position = Vector2(585.5, 550)
-scale = Vector2(8.3359375, 1)
-texture = ExtResource("5_vfkow")
+position = Vector2(640.0001, 304)
