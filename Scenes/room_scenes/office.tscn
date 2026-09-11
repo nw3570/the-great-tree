@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cxdmg7st1aosf"]
+
+[ext_resource type="Script" uid="uid://dtdhkqpxhcd4q" path="res://Scripts/office.gd" id="1_tbtw1"]
+
+[node name="Office" type="Node2D" unique_id=510607398]
+script = ExtResource("1_tbtw1")
+metadata/_custom_type_script = "uid://cxy6ct5krn8a3"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1326855395]
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1405730431]

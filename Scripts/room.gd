@@ -5,20 +5,11 @@ class_name Room
 var background: Sprite2D
 #@onready var background: Sprite2D = $Background
 
-#var game_context: GameContext = null
-var navigator: RoomNavigator = null
+#var game_context: GameContext
+#var navigator: Navigator
 
 func _ready() -> void:
 	assert(background != null, "Room is missing 'Background (Sprite2D)' node")
-	
-	# For all objects in this room, connect to the interaction signal.
-	#for game_object in get_tree().get_nodes_in_group("game_object"):
-		#if game_object.mouse_clicked:
-			#game_object.mouse_clicked.connect(_on_object_interacted)
-
-
-#func _on_object_interacted(_game_object) -> void:
-	#game_object.in_game_interaction(game_context)
 
 ## Calculates a Rect2 for the visible area of the room's background, in global
 ## coordinates.

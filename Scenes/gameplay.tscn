@@ -9,5 +9,3 @@ script = ExtResource("1_hf1ha")
 [node name="PlayerCamera2D" type="Camera2D" parent="." unique_id=1628826662]
 script = ExtResource("2_wbxth")
 metadata/_custom_type_script = "uid://dbnkkrkohg788"
-
-[node name="UILayer" type="CanvasLayer" parent="." unique_id=1315036882]

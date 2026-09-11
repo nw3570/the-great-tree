@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://coo7tyiw7xvue"]
+
+[ext_resource type="Script" uid="uid://20f5ekkg0fki" path="res://Scripts/corridor.gd" id="1_lmla5"]
+[ext_resource type="Texture2D" uid="uid://b17b1pw8xmcqk" path="res://Visuals/V1/Corridor.png" id="2_lmla5"]
+[ext_resource type="Script" uid="uid://co6tirury88ug" path="res://Scripts/passage.gd" id="3_5xqk5"]
+[ext_resource type="Script" uid="uid://6d3beus1ff8h" path="res://Scripts/room_door.gd" id="4_7dj21"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6eco"]
+size = Vector2(103, 106)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_juxwv"]
+size = Vector2(96.5, 203)
+
+[node name="Corridor" type="Node2D" unique_id=1489738556]
+script = ExtResource("1_lmla5")
+metadata/_custom_type_script = "uid://cxy6ct5krn8a3"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1030798321]
+position = Vector2(576.00006, 322)
+scale = Vector2(3.5937502, 3.6000001)
+texture = ExtResource("2_lmla5")
+
+[node name="Passage" type="Area2D" parent="." unique_id=1923287194]
+script = ExtResource("3_5xqk5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Passage" unique_id=1351995741]
+position = Vector2(576, 269)
+shape = SubResource("RectangleShape2D_k6eco")
+
+[node name="RoomDoor" type="Area2D" parent="." unique_id=606012523]
+script = ExtResource("4_7dj21")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomDoor" unique_id=1648168575]
+position = Vector2(88, 352.5)
+shape = SubResource("RectangleShape2D_juxwv")

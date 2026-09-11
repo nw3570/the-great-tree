@@ -40,4 +40,3 @@ func _deferred_switch_nodes(old_scene: Node, new_scene: Node) -> void:
 	parent.move_child(new_scene, index)
 	
 	switch_completed.emit()
-
