@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b1ccptv54dwir"]
+
+[ext_resource type="Script" uid="uid://p6itq4oy3k8r" path="res://Scripts/divorced_room.gd" id="1_rr0oq"]
+[ext_resource type="PackedScene" uid="uid://dnck8es454nfa" path="res://Scenes/ui/character_room_ui.tscn" id="2_rr0oq"]
+
+[node name="Room" type="Node2D" unique_id=1222827286 node_paths=PackedStringArray("background")]
+script = ExtResource("1_rr0oq")
+background = NodePath("Background")
+metadata/_custom_type_script = "uid://cvqpriy65n3lr"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1508555318]
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1476880401]
+
+[node name="CharacterRoomUI" parent="UILayer" unique_id=693767631 instance=ExtResource("2_rr0oq")]
