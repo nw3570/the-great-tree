@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name CHARACTER
 const CHARACTER_SHADER = preload("uid://r0qfsecxyya7")
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 signal interact
 signal set_speak(Value : bool)
@@ -16,6 +17,7 @@ var animation_player : AnimationPlayer
 
 
 func _ready() -> void:
+	if audio_stream_player_2d: audio_stream_player_2d.stop()
 	scale = scale *4
 	add_to_group("character")
 	for child in get_children():
@@ -35,8 +37,13 @@ func _on_interact():
 	print("Interacted with "+ID)
 
 func _set_speak(value : bool):
+	#_move()
 	if value: timer.autostart = true
-	timer.start(.8)
+	if value: if audio_stream_player_2d: audio_stream_player_2d.play()
+	if value: timer.start(.4)
+	if !value: timer.autostart = false
+	if !value: if audio_stream_player_2d: audio_stream_player_2d.stop()
+	if !value: timer.stop()
 	speaking = value
 
 func _input(event: InputEvent) -> void:

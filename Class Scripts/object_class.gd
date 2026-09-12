@@ -17,7 +17,8 @@ var object_id : String
 var original_rotation
 
 func _ready() -> void:
-	tooltip_text = "TOOL TIP"
+	z_index = 2
+	#tooltip_text = "TOOL TIP"
 	add_to_group("game_object")
 	object_id = name
 	object_id = object_id.to_upper()
@@ -52,6 +53,9 @@ func _mouse_exited():
 
 func _input(event: InputEvent) -> void:
 	if (event.is_action_pressed("LMB") && selected):
+		print(selected)
+		var MOH: MAIN_OBJ_HANDLER = MAIN_OBJ_HANDLER.new()
+		MOH._interacted_with_object(object_id, get_parent())
 		emit_signal("mouse_clicked", object_id)
 
 func _show_tooltip():

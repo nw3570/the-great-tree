@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c4heppwek0bui"]
+
+[ext_resource type="Script" uid="uid://b06wkrm0gq5ea" path="res://Class Scripts/object_class.gd" id="1_54p7i"]
+[ext_resource type="Texture2D" uid="uid://cccxnf3m0qqi1" path="res://Visuals/V1/Grandma's Room/pictureframe.png" id="2_jphif"]
+
+[node name="photo" type="StaticBody2D" unique_id=1588573482]
+script = ExtResource("1_54p7i")
+metadata/_custom_type_script = "uid://b06wkrm0gq5ea"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1314089346]
+texture = ExtResource("2_jphif")

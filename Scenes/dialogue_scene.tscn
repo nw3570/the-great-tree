@@ -204,13 +204,13 @@ _data = {
 [sub_resource type="LabelSettings" id="LabelSettings_rh206"]
 font_size = 31
 
-[node name="Dialogue scene" type="Node2D" unique_id=2068092485]
+[node name="Dialogue scene" type="Node2D" unique_id=2068092485 groups=["dia"]]
 script = ExtResource("1_ti2d6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1289690741]
 libraries/ = SubResource("AnimationLibrary_ev3xg")
 
-[node name="WDithering" type="Sprite2D" parent="." unique_id=1891722615]
+[node name="WDithering" type="Sprite2D" parent="." unique_id=1891722615 groups=["dia"]]
 position = Vector2(743.3334, 229.99998)
 scale = Vector2(2.5666668, 2.5666668)
 texture = ExtResource("1_4i2g3")

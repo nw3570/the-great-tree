@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b07pxp0aqeqeu" path="res://Visuals/V1/oldsad.png" id="4_kuwo5"]
 [ext_resource type="Texture2D" uid="uid://ddpioax8wikiv" path="res://Visuals/V1/oldshut.png" id="5_6juyv"]
 [ext_resource type="Texture2D" uid="uid://3mq1a8dsbyny" path="res://Visuals/V1/oldspeak.png" id="6_saeyn"]
+[ext_resource type="AudioStream" uid="uid://ddlcl44orsqfh" path="res://audio/grannyTALK.mp3" id="7_2rd6a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t85ko"]
 animations = [{
@@ -28,6 +29,7 @@ animations = [{
 }]
 
 [node name="OLD" type="CharacterBody2D" unique_id=354779813]
+rotation = 0.2617994
 script = ExtResource("1_05hoi")
 metadata/_custom_type_script = "uid://cmgwhu7wxbnvt"
 
@@ -38,3 +40,8 @@ libraries/character_animations = ExtResource("2_2rd6a")
 sprite_frames = SubResource("SpriteFrames_t85ko")
 
 [node name="Timer" type="Timer" parent="." unique_id=1406904912]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=46250984 groups=["character"]]
+stream = ExtResource("7_2rd6a")
+autoplay = true
+parameters/looping = true

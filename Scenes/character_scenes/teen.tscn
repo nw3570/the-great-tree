@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cukg7x7vdmjbf"]
+
+[ext_resource type="Script" uid="uid://cmgwhu7wxbnvt" path="res://Class Scripts/character_class.gd" id="1_j1mok"]
+[ext_resource type="AudioStream" uid="uid://n1sqjahpc1dy" path="res://audio/teen talking.mp3" id="2_dtvwq"]
+[ext_resource type="AnimationLibrary" uid="uid://b22wtw3cmnva6" path="res://Animations/character_animations.res" id="3_w0bs1"]
+[ext_resource type="Texture2D" uid="uid://k33o1skatrkw" path="res://Visuals/V1/teenangry.png" id="4_010wk"]
+[ext_resource type="Texture2D" uid="uid://odbw07g8bckl" path="res://Visuals/V1/teenhappy.png" id="5_xkp3h"]
+[ext_resource type="Texture2D" uid="uid://btwek30ihdvlb" path="res://Visuals/V1/teenshut.png" id="6_o04u3"]
+[ext_resource type="Texture2D" uid="uid://dx2xymdi8xkdf" path="res://Visuals/V1/teenspeakpng.png" id="7_0ykkt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rh206"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_010wk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xkp3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_o04u3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0ykkt")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CHARACTER" type="CharacterBody2D" unique_id=2026793978]
+rotation = 0.2617994
+script = ExtResource("1_j1mok")
+metadata/_custom_type_script = "uid://cmgwhu7wxbnvt"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=907327384 groups=["character"]]
+stream = ExtResource("2_dtvwq")
+parameters/looping = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=629503302]
+libraries/character_animations = ExtResource("3_w0bs1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1825313495 groups=["object_sprite"]]
+sprite_frames = SubResource("SpriteFrames_rh206")
+
+[node name="Timer" type="Timer" parent="." unique_id=1059618817]

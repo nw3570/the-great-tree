@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bxvkus8ek5j3h"]
+
+[ext_resource type="Script" uid="uid://cr2sbwbwvmg3p" path="res://Scripts/main_menu.gd" id="1_28flt"]
+
+[node name="Main Menu" type="Node2D" unique_id=1016704256]
+script = ExtResource("1_28flt")
+
+[node name="start_button" type="Button" parent="." unique_id=1148742618]
+offset_left = 38.0
+offset_top = 355.0
+offset_right = 84.0
+offset_bottom = 386.0
+scale = Vector2(2.2700996, 2.2700996)
+text = "Start"
+
+[node name="credits" type="Button" parent="." unique_id=112172441]
+offset_left = 38.000008
+offset_top = 437.0
+offset_right = 101.00001
+offset_bottom = 468.0
+scale = Vector2(2.2700996, 2.2700996)
+text = "Credits"
+
+[node name="options" type="Button" parent="." unique_id=1053318848]
+offset_left = 38.0
+offset_top = 519.0
+offset_right = 108.0
+offset_bottom = 550.0
+scale = Vector2(2.2700996, 2.2700996)
+text = "Options
+"

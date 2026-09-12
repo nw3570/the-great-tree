@@ -1,7 +1,6 @@
 [gd_resource type="Theme" format=4 uid="uid://dyp47s2ifeis0"]
 
 [ext_resource type="StyleBox" uid="uid://j8hdlnxftlxd" path="res://Themes/game_ui_box.tres" id="1_v6q4r"]
-[ext_resource type="StyleBox" path="res://Themes/game_ui_box" id="3_0xr0m"]
 
 [sub_resource type="Image" id="Image_3ovl0"]
 data = {
@@ -917,4 +916,4 @@ Button/styles/hover = SubResource("StyleBoxFlat_kg3qs")
 Button/styles/normal = ExtResource("1_v6q4r")
 Button/styles/pressed = SubResource("StyleBoxFlat_od54j")
 Panel/styles/panel = ExtResource("1_v6q4r")
-PanelContainer/styles/panel = ExtResource("3_0xr0m")
+PanelContainer/styles/panel = null

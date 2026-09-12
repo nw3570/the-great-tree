@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cge4ww5rqnr8n"]
+
+[ext_resource type="Script" uid="uid://b06wkrm0gq5ea" path="res://Class Scripts/object_class.gd" id="1_b1kia"]
+[ext_resource type="Texture2D" uid="uid://cwi6o51scy2u1" path="res://Visuals/V1/Grandma's Room/bible.png" id="2_3mxfu"]
+
+[node name="wet_book" type="StaticBody2D" unique_id=775814828]
+script = ExtResource("1_b1kia")
+metadata/_custom_type_script = "uid://b06wkrm0gq5ea"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=143446288]
+texture = ExtResource("2_3mxfu")

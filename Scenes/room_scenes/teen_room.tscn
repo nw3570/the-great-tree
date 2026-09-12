@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://jfhh4qk31d1q"]
+
+[ext_resource type="Script" uid="uid://cvqpriy65n3lr" path="res://Scripts/room.gd" id="1_pesnf"]
+[ext_resource type="Texture2D" uid="uid://c2x26hcy30q77" path="res://Visuals/V1/Grandma's Room/Grandma's Room.png" id="2_pa8ae"]
+
+[node name="teen_room" type="Node2D" unique_id=1758197680]
+script = ExtResource("1_pesnf")
+metadata/_custom_type_script = "uid://cvqpriy65n3lr"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1974602681]
+
+[node name="Grandma\'sRoom" type="Sprite2D" parent="." unique_id=1357673057]
+position = Vector2(577.7778, 323)
+scale = Vector2(3.6111112, 3.6111112)
+texture = ExtResource("2_pa8ae")
