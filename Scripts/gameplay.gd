@@ -6,7 +6,7 @@ var navigator := RoomNavigator.new()
 
 func _ready() -> void:
 	navigator.room_transition_started.connect(_on_navigator_room_transition_started)
-	navigator.set_initial_room(self, "office")
+	navigator.set_initial_room(self, "granny")
 
 #func _on_object_interacted(_game_object) -> void:
 	#game_object.in_game_interaction(game_context)

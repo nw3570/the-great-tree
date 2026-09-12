@@ -2,7 +2,7 @@ extends Node2D
 class_name Room
 
 ## Reference to the backgroun sprite/image of the room scene.
-var background: Sprite2D
+@export var background: Sprite2D
 #@onready var background: Sprite2D = $Background
 
 #var game_context: GameContext

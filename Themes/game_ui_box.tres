@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://j8hdlnxftlxd"]
+
+[ext_resource type="Texture2D" uid="uid://dio1u4ke6tc6r" path="res://Visuals/V1/DialogueBox.png" id="1_iu1n2"]
+
+[resource]
+texture = ExtResource("1_iu1n2")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0

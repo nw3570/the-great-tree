@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://du21ljcy581yq"]
+
+[ext_resource type="Script" uid="uid://kkvbnfv0tqhn" path="res://Scripts/options_menu.gd" id="1_c84ca"]
+[ext_resource type="Theme" uid="uid://dyp47s2ifeis0" path="res://Themes/game_theme.tres" id="2_htm0e"]
+
+[node name="OptionsMenu" type="PanelContainer" unique_id=1306383399]
+offset_right = 51.0
+offset_bottom = 60.0
+theme = ExtResource("2_htm0e")
+script = ExtResource("1_c84ca")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=939002678]
+layout_mode = 2

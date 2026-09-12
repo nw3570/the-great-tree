@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://ct3gxlsts0sel" path="res://Scripts/granny.gd" id="1_sd6s2"]
 [ext_resource type="Texture2D" uid="uid://c2x26hcy30q77" path="res://Visuals/V1/Grandma's Room/Grandma's Room.png" id="2_05xsy"]
+[ext_resource type="PackedScene" uid="uid://dnck8es454nfa" path="res://Scenes/ui/character_room_ui.tscn" id="3_05xsy"]
 
-[node name="Room" type="Node2D" unique_id=204203747]
+[node name="Room" type="Node2D" unique_id=204203747 node_paths=PackedStringArray("background")]
 script = ExtResource("1_sd6s2")
+background = NodePath("Background")
 metadata/_custom_type_script = "uid://cxy6ct5krn8a3"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1918951703]
@@ -13,3 +15,5 @@ scale = Vector2(3.5875, 3.5777779)
 texture = ExtResource("2_05xsy")
 
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=1930512522]
+
+[node name="CharacterRoomUI" parent="UILayer" unique_id=693767631 instance=ExtResource("3_05xsy")]

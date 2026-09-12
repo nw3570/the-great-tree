@@ -20,6 +20,8 @@ class_name PlayerCamera2D
 var _min_position: Vector2
 var _max_position: Vector2
 
+var _movement_lock: int = 0
+
 #func _ready() -> void:
 	#pan_range = Vector2(100.0, 100.0)
 	#set_bounds(Vector2(1150, 660)) # <--- Test for corridor image
@@ -27,6 +29,9 @@ var _max_position: Vector2
 # Updates the camera position based on the mouse position near the border of the
 # screen.
 func _process(delta: float) -> void:
+	if _movement_lock > 0:
+		return
+	
 	var pan_direction = _pan_direction_from_mouse_position()	
 	
 	global_position += pan_speed * pan_direction.normalized() * delta
@@ -49,6 +54,13 @@ func set_bounds(bg_rect: Rect2) -> void:
 	# camera can move more freely.
 	_min_position = bg_rect.position + half_visible_area - pan_range
 	_max_position = bg_rect.end - half_visible_area + pan_range
+
+func lock_movement() -> void:
+	_movement_lock += 1
+
+func unlock_movement() -> void:
+	if _movement_lock > 0:
+		_movement_lock -= 1
 
 ## Calculates the direction vector for the camera movement, based on the current
 ## mouse position and edge_margin. 
