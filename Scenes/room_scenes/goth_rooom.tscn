@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cviiqpgyyoy0u"]
+
+[ext_resource type="Script" uid="uid://cvqpriy65n3lr" path="res://Scripts/room.gd" id="1_cykpr"]
+[ext_resource type="Texture2D" uid="uid://bapxqdnfby6k6" path="res://Visuals/V1/Goth's Room/goth_room.png" id="2_35ojq"]
+[ext_resource type="PackedScene" uid="uid://irfwvd2tm8sc" path="res://Scenes/objects/goth_objects/candle.tscn" id="3_ovh44"]
+[ext_resource type="PackedScene" uid="uid://uwaoxg32e8vg" path="res://Scenes/objects/goth_objects/cat.tscn" id="4_n788y"]
+[ext_resource type="PackedScene" uid="uid://cu7n85je610dy" path="res://Scenes/objects/goth_objects/nazi.tscn" id="5_q8qha"]
+[ext_resource type="PackedScene" uid="uid://bmb3mpbfwv5it" path="res://Scenes/objects/goth_objects/painting.tscn" id="6_majn0"]
+[ext_resource type="PackedScene" uid="uid://fofu2a7mgu6y" path="res://Scenes/objects/goth_objects/symbol.tscn" id="7_jss1f"]
+
+[node name="goth_rooom" type="Node2D" unique_id=786654578]
+script = ExtResource("1_cykpr")
+metadata/_custom_type_script = "uid://cvqpriy65n3lr"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1970688408]
+
+[node name="GothRoom" type="Sprite2D" parent="." unique_id=536511454]
+position = Vector2(577.0215, 324.75)
+scale = Vector2(1.8019391, 1.801939)
+texture = ExtResource("2_35ojq")
+
+[node name="candles" parent="." unique_id=2069786887 instance=ExtResource("3_ovh44")]
+position = Vector2(677.00006, 471.00003)
+scale = Vector2(1.802, 1.802)
+
+[node name="cat" parent="." unique_id=618133056 instance=ExtResource("4_n788y")]
+position = Vector2(939, 563)
+scale = Vector2(1.802, 1.802)
+
+[node name="nazi" parent="." unique_id=1328846377 instance=ExtResource("5_q8qha")]
+position = Vector2(795.00006, 249.00002)
+scale = Vector2(1.802, 1.802)
+
+[node name="painting" parent="." unique_id=40864408 instance=ExtResource("6_majn0")]
+position = Vector2(304.00003, 247.00002)
+scale = Vector2(1.802, 1.802)
+
+[node name="symbol" parent="." unique_id=1051275526 instance=ExtResource("7_jss1f")]
+position = Vector2(93.00001, 232.00002)
+scale = Vector2(1.802, 1.802)

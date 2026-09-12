@@ -1,15 +1,43 @@
 [gd_scene format=3 uid="uid://jfhh4qk31d1q"]
 
 [ext_resource type="Script" uid="uid://cvqpriy65n3lr" path="res://Scripts/room.gd" id="1_pesnf"]
-[ext_resource type="Texture2D" uid="uid://c2x26hcy30q77" path="res://Visuals/V1/Grandma's Room/Grandma's Room.png" id="2_pa8ae"]
+[ext_resource type="Texture2D" uid="uid://dx4c6splojhv8" path="res://Visuals/V1/Teen's Room/background.png" id="2_nq0q6"]
+[ext_resource type="PackedScene" uid="uid://mlmw3aw2xdsm" path="res://Scenes/objects/teen_objects/bed.tscn" id="3_u4q5e"]
+[ext_resource type="PackedScene" uid="uid://c6igcj5a3t6pq" path="res://Scenes/objects/teen_objects/graffiti.tscn" id="4_ipbsr"]
+[ext_resource type="PackedScene" uid="uid://dixisq6f3e35q" path="res://Scenes/objects/teen_objects/guitar.tscn" id="5_lbn3y"]
+[ext_resource type="PackedScene" uid="uid://ds0idlyax0daw" path="res://Scenes/objects/teen_objects/poster.tscn" id="6_0qu2e"]
+[ext_resource type="PackedScene" uid="uid://cpc60klg14ywg" path="res://Scenes/objects/teen_objects/road_sign.tscn" id="7_h7o1n"]
+[ext_resource type="PackedScene" uid="uid://3xvftv4fcyqx" path="res://Scenes/objects/teen_objects/skateboard.tscn" id="8_ywn5f"]
 
 [node name="teen_room" type="Node2D" unique_id=1758197680]
 script = ExtResource("1_pesnf")
 metadata/_custom_type_script = "uid://cvqpriy65n3lr"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1974602681]
+position = Vector2(576.8889, 324.5)
+scale = Vector2(1.8027778, 1.8027776)
+texture = ExtResource("2_nq0q6")
 
-[node name="Grandma\'sRoom" type="Sprite2D" parent="." unique_id=1357673057]
-position = Vector2(577.7778, 323)
-scale = Vector2(3.6111112, 3.6111112)
-texture = ExtResource("2_pa8ae")
+[node name="bed" parent="." unique_id=105033198 instance=ExtResource("3_u4q5e")]
+position = Vector2(811, 515)
+scale = Vector2(1.803, 1.803)
+
+[node name="graffiti" parent="." unique_id=726686432 instance=ExtResource("4_ipbsr")]
+position = Vector2(272, 488)
+scale = Vector2(1.803, 1.803)
+
+[node name="guitar" parent="." unique_id=762494628 instance=ExtResource("5_lbn3y")]
+position = Vector2(538, 424)
+scale = Vector2(1.803, 1.803)
+
+[node name="poster" parent="." unique_id=1473763213 instance=ExtResource("6_0qu2e")]
+position = Vector2(89, 206)
+scale = Vector2(1.803, 1.803)
+
+[node name="road_sign" parent="." unique_id=849809709 instance=ExtResource("7_h7o1n")]
+position = Vector2(422, 469)
+scale = Vector2(1.803, 1.803)
+
+[node name="skateboard" parent="." unique_id=1720060394 instance=ExtResource("8_ywn5f")]
+position = Vector2(159, 579)
+scale = Vector2(1.803, 1.803)

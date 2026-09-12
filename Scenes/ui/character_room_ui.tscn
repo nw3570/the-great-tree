@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bjbmvctudfgcf" path="res://Scripts/character_room_ui.gd" id="1_y66v1"]
 [ext_resource type="PackedScene" uid="uid://du21ljcy581yq" path="res://Scenes/ui/options_menu.tscn" id="2_h4yc4"]
-[ext_resource type="Texture2D" uid="uid://ddpioax8wikiv" path="res://Visuals/V1/oldshut.png" id="3_tfs7s"]
-[ext_resource type="Texture2D" uid="uid://3mq1a8dsbyny" path="res://Visuals/V1/oldspeak.png" id="4_dw7pv"]
+[ext_resource type="Texture2D" uid="uid://ddpioax8wikiv" path="res://Visuals/V1/Characters/oldshut.png" id="3_tfs7s"]
+[ext_resource type="Texture2D" uid="uid://3mq1a8dsbyny" path="res://Visuals/V1/Characters/oldspeak.png" id="4_dw7pv"]
 
 [node name="CharacterRoomUI" type="Control" unique_id=693767631]
 layout_mode = 3

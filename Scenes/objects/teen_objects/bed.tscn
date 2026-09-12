@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://mlmw3aw2xdsm"]
+
+[ext_resource type="Script" uid="uid://b06wkrm0gq5ea" path="res://Class Scripts/object_class.gd" id="1_1l2c6"]
+[ext_resource type="Texture2D" uid="uid://c5q8kd8ixs8um" path="res://Visuals/V1/Teen's Room/bed.png" id="2_yxwai"]
+
+[node name="bed" type="StaticBody2D" unique_id=105033198]
+script = ExtResource("1_1l2c6")
+metadata/_custom_type_script = "uid://b06wkrm0gq5ea"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1157230877]
+texture = ExtResource("2_yxwai")

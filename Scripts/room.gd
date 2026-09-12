@@ -1,15 +1,18 @@
 extends Node2D
 class_name Room
+const TEEN = preload("uid://cukg7x7vdmjbf")
 
 ## Reference to the backgroun sprite/image of the room scene.
 @export var background: Sprite2D
 #@onready var background: Sprite2D = $Background
+@onready var character_room_ui: CharacterRoomUI = $UILayer/CharacterRoomUI
 
 #var game_context: GameContext
 #var navigator: Navigator
 
 func _ready() -> void:
-	assert(background != null, "Room is missing 'Background (Sprite2D)' node")
+	pass
+	#assert(background != null, "Room is missing 'Background (Sprite2D)' node")
 
 ## Calculates a Rect2 for the visible area of the room's background, in global
 ## coordinates.

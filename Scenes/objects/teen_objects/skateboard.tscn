@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://3xvftv4fcyqx"]
+
+[ext_resource type="Script" uid="uid://b06wkrm0gq5ea" path="res://Class Scripts/object_class.gd" id="1_647jk"]
+[ext_resource type="Texture2D" uid="uid://bkuyud8v60656" path="res://Visuals/V1/Teen's Room/skateboard.png" id="2_87qoa"]
+
+[node name="skateboard" type="StaticBody2D" unique_id=1720060394]
+script = ExtResource("1_647jk")
+metadata/_custom_type_script = "uid://b06wkrm0gq5ea"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1179445347]
+texture = ExtResource("2_87qoa")

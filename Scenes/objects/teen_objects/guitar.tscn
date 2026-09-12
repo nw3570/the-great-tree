@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dixisq6f3e35q"]
+
+[ext_resource type="Script" uid="uid://b06wkrm0gq5ea" path="res://Class Scripts/object_class.gd" id="1_1img1"]
+[ext_resource type="Texture2D" uid="uid://cx4o67sbnn024" path="res://Visuals/V1/Teen's Room/guitar.png" id="2_biyuo"]
+[ext_resource type="Script" uid="uid://cpnw0ctu18l1c" path="res://Scenes/objects/teen_objects/special_area.gd" id="3_biyuo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rh206"]
+size = Vector2(12, 18)
+
+[node name="guitar" type="StaticBody2D" unique_id=762494628]
+script = ExtResource("1_1img1")
+metadata/_custom_type_script = "uid://b06wkrm0gq5ea"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=286431520]
+texture = ExtResource("2_biyuo")
+
+[node name="special_area" type="Area2D" parent="." unique_id=1715860981]
+script = ExtResource("3_biyuo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="special_area" unique_id=1774333325]
+position = Vector2(0, 26)
+shape = SubResource("RectangleShape2D_rh206")
+
+[connection signal="mouse_entered" from="special_area" to="special_area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="special_area" to="special_area" method="_on_mouse_exited"]

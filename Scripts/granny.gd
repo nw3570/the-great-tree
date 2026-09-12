@@ -38,20 +38,20 @@ func _input(event: InputEvent) -> void:
 
 func _sharon_dialogue() -> void:
 	var new_dia :dialogue_scene = DIALOGUE_SCENE.instantiate()
-	new_dia.emit_signal("character_added", true)
+	new_dia.emit_signal("add_character", true)
 	add_child(new_dia)
 	_spawn_old_character(new_dia, true, true)
 	find_child("UILayer").visible = false
 	new_dia.z_index += 5
 	new_dia.emit_signal("start_dialogue_animation")
-	for i in family_dias:
-		new_dia.emit_signal("send_dia", i)
+	for i in sharon_dias:
+		if new_dia: new_dia.emit_signal("send_dia", i)
 		await enter_pressed
 
 
 func _family_dialogue() -> void:
 	var new_dia :dialogue_scene = DIALOGUE_SCENE.instantiate()
-	new_dia.emit_signal("character_added", true)
+	new_dia.emit_signal("add_character", true)
 	add_child(new_dia)
 	_spawn_old_character(new_dia, true, true)
 	find_child("UILayer").visible = false
@@ -63,7 +63,7 @@ func _family_dialogue() -> void:
 
 func _disease_dialogue() -> void:
 	var new_dia :dialogue_scene = DIALOGUE_SCENE.instantiate()
-	new_dia.emit_signal("character_added", true)
+	new_dia.emit_signal("add_character", true)
 	add_child(new_dia)
 	_spawn_old_character(new_dia, true, true)
 	find_child("UILayer").visible = false

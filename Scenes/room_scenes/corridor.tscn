@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dio1u4ke6tc6r" path="res://Visuals/V1/DialogueBox.png" id="6_57p7w"]
 [ext_resource type="Texture2D" uid="uid://cyv6r5t2ymckt" path="res://black_screen.png" id="6_k6eco"]
 [ext_resource type="FontFile" uid="uid://lanqoh1nlyv2" path="res://Fonts/VT323/VT323-Regular.ttf" id="7_5v1ds"]
+[ext_resource type="AudioStream" uid="uid://b5q5bhikwngie" path="res://audio/door OPENING vf.mp3" id="8_5v1ds"]
+[ext_resource type="AudioStream" uid="uid://bdknl3w1spmde" path="res://audio/door CLOSING vf.mp3" id="9_ovwtt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k6eco"]
 size = Vector2(103, 106)
@@ -199,3 +201,9 @@ text = "Yes"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="buttons/yes/Area2D" unique_id=238418841]
 shape = SubResource("RectangleShape2D_rh206")
+
+[node name="door_open" type="AudioStreamPlayer2D" parent="." unique_id=1423601280]
+stream = ExtResource("8_5v1ds")
+
+[node name="door_close" type="AudioStreamPlayer2D" parent="." unique_id=1600173588]
+stream = ExtResource("9_ovwtt")

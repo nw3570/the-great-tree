@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ctvln8l8thgj8" path="res://Visuals/V1/w Dithering.png" id="1_4i2g3"]
 [ext_resource type="Script" uid="uid://dllibrnte56no" path="res://Scripts/dialogue_scene.gd" id="1_ti2d6"]
 [ext_resource type="Texture2D" uid="uid://dio1u4ke6tc6r" path="res://Visuals/V1/DialogueBox.png" id="2_ti2d6"]
+[ext_resource type="FontFile" uid="uid://lanqoh1nlyv2" path="res://Fonts/VT323/VT323-Regular.ttf" id="4_ti2d6"]
 
 [sub_resource type="Animation" id="Animation_4i2g3"]
 length = 0.001
@@ -202,7 +203,9 @@ _data = {
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_rh206"]
-font_size = 31
+font = ExtResource("4_ti2d6")
+font_size = 45
+font_color = Color(0.20695567, 0.09654126, 0.0012023543, 1)
 
 [node name="Dialogue scene" type="Node2D" unique_id=2068092485 groups=["dia"]]
 script = ExtResource("1_ti2d6")

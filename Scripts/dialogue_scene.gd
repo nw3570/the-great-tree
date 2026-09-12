@@ -109,6 +109,7 @@ func _send_dialogue(dial):
 				if ui: ui.visible = true
 				queue_free()
 				return
+			if !character: return
 			character.emit_signal("set_speak", true)
 			character.visible = true
 			character.emit_signal("set_speak", true)

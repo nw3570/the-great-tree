@@ -3,6 +3,7 @@ class_name DOOR
 
 signal yes_pressed
 signal no_pressed
+const DOOR_OPENING_VF = preload("uid://b5q5bhikwngie")
 
 # ============================================================
 # PRELOADS
@@ -23,6 +24,8 @@ var in_yes:bool = false
 var in_no:bool = false
 var yes_area :Area2D
 var no_area : Area2D
+var open_sound : AudioStreamPlayer2D
+var close_sound : AudioStreamPlayer2D
 
 # ============================================================
 # STATE
@@ -34,6 +37,8 @@ var in_area : bool = false
 # ============================================================
 var buttons : Node2D
 func _ready() -> void:
+	open_sound = get_parent().find_child("door_open")
+	close_sound = get_parent().find_child("door_close")
 	buttons = get_parent().find_child("buttons")
 	buttons.visible = false
 	animation_player = get_parent().find_child("AnimationPlayer")
@@ -134,6 +139,10 @@ func _teen_dialogue(dia : dialogue_scene) -> void:
 	new_teen.visible = visible
 	print("Teen dialogue")
 	dia.emit_signal("send_dia", "Sup dude-I mean sir. Gotta search here, or something?")
+	await yes_pressed
+	open_sound.play()
+	await open_sound.finished
+	get_tree().change_scene_to_file("res://Scenes/room_scenes/teen_room.tscn")
 
 func _goth_dialogue(dia : dialogue_scene) -> void:
 	var new_goth : CHARACTER = GOTH.instantiate()
@@ -141,21 +150,35 @@ func _goth_dialogue(dia : dialogue_scene) -> void:
 	dia.emit_signal("add_character", visible)
 	new_goth.visible = visible
 	dia.emit_signal("send_dia", "Hello, mister. You must be the detective, do you need any help from here?")
+	await yes_pressed
+	open_sound.play()
+	await open_sound.finished
+	get_tree().change_scene_to_file("res://Scenes/room_scenes/goth_rooom.tscn")
 
 func _buisness_dialogue(dia : dialogue_scene) -> void:
 	print("Buisness dialogue")
 	dia.emit_signal("start_dialogue_animation")
 	dia.emit_signal("send_dia", "Oh… Hi there. Can I help you, detective?")
+	await yes_pressed
+	open_sound.play()
+	await open_sound.finished
 
 func _divorced_dialogue(dia : dialogue_scene) -> void:
 	print("Divorced dialogue")
 	dia.emit_signal("start_dialogue_animation")
 	dia.emit_signal("send_dia", "Excuse me sir, do you want anything from my room?")
+	await yes_pressed
+	open_sound.play()
+	await open_sound.finished
 
 func _archeologist_dialogue(dia : dialogue_scene) -> void:
 	print("Archeologist dialogue")
 	dia.emit_signal("start_dialogue_animation")
 	dia.emit_signal("send_dia", "Hello sir, can I be of any help?")
+	await yes_pressed
+	open_sound.play()
+	await open_sound.finished
+	
 
 func _old_dialogue(dia : dialogue_scene) -> void:
 	var new_old : CHARACTER = OLD.instantiate()
@@ -164,4 +187,6 @@ func _old_dialogue(dia : dialogue_scene) -> void:
 	new_old.visible = visible
 	dia.emit_signal("send_dia", "Hello there, does the gentleman need to come inside?")
 	await yes_pressed
+	open_sound.play()
+	await open_sound.finished
 	get_tree().change_scene_to_file("res://Scenes/room_scenes/granny.tscn")

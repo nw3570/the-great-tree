@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://cmgwhu7wxbnvt" path="res://Class Scripts/character_class.gd" id="1_j1mok"]
 [ext_resource type="AudioStream" uid="uid://n1sqjahpc1dy" path="res://audio/teen talking.mp3" id="2_dtvwq"]
 [ext_resource type="AnimationLibrary" uid="uid://b22wtw3cmnva6" path="res://Animations/character_animations.res" id="3_w0bs1"]
-[ext_resource type="Texture2D" uid="uid://k33o1skatrkw" path="res://Visuals/V1/teenangry.png" id="4_010wk"]
-[ext_resource type="Texture2D" uid="uid://odbw07g8bckl" path="res://Visuals/V1/teenhappy.png" id="5_xkp3h"]
-[ext_resource type="Texture2D" uid="uid://btwek30ihdvlb" path="res://Visuals/V1/teenshut.png" id="6_o04u3"]
-[ext_resource type="Texture2D" uid="uid://dx2xymdi8xkdf" path="res://Visuals/V1/teenspeakpng.png" id="7_0ykkt"]
+[ext_resource type="Texture2D" uid="uid://k33o1skatrkw" path="res://Visuals/V1/Characters/teenangry.png" id="4_010wk"]
+[ext_resource type="Texture2D" uid="uid://odbw07g8bckl" path="res://Visuals/V1/Characters/teenhappy.png" id="5_xkp3h"]
+[ext_resource type="Texture2D" uid="uid://btwek30ihdvlb" path="res://Visuals/V1/Characters/teenshut.png" id="6_o04u3"]
+[ext_resource type="Texture2D" uid="uid://dx2xymdi8xkdf" path="res://Visuals/V1/Characters/teenspeakpng.png" id="7_0ykkt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rh206"]
 animations = [{

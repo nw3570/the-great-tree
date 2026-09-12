@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://cmgwhu7wxbnvt" path="res://Class Scripts/character_class.gd" id="1_7fp4h"]
 [ext_resource type="Animation" uid="uid://sd8yvwdkssv1" path="res://Animations/character_RESET.res" id="2_8n4ui"]
-[ext_resource type="Texture2D" uid="uid://cqka6kd3d8tgy" path="res://Visuals/V1/gothhappy.png" id="2_mfm2o"]
-[ext_resource type="Texture2D" uid="uid://bjyq5y6wyt01p" path="res://Visuals/V1/gothsad.png" id="3_ipk7o"]
+[ext_resource type="Texture2D" uid="uid://cqka6kd3d8tgy" path="res://Visuals/V1/Characters/gothhappy.png" id="2_mfm2o"]
+[ext_resource type="Texture2D" uid="uid://bjyq5y6wyt01p" path="res://Visuals/V1/Characters/gothsad.png" id="3_ipk7o"]
 [ext_resource type="Animation" uid="uid://blch3heloao1k" path="res://Animations/character_idle.res" id="3_jkds3"]
-[ext_resource type="Texture2D" uid="uid://dw882ge55cat2" path="res://Visuals/V1/gothshut.png" id="4_7kf4p"]
+[ext_resource type="Texture2D" uid="uid://dw882ge55cat2" path="res://Visuals/V1/Characters/gothshut.png" id="4_7kf4p"]
 [ext_resource type="Animation" uid="uid://ccfqwmu6j2qb3" path="res://Animations/character_wobble.res" id="4_vholr"]
-[ext_resource type="Texture2D" uid="uid://bg050e3m0n7oh" path="res://Visuals/V1/gothspeak.png" id="5_8n4ui"]
+[ext_resource type="Texture2D" uid="uid://bg050e3m0n7oh" path="res://Visuals/V1/Characters/gothspeak.png" id="5_8n4ui"]
 [ext_resource type="AnimationLibrary" uid="uid://b22wtw3cmnva6" path="res://Animations/character_animations.res" id="5_fhrux"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fhrux"]

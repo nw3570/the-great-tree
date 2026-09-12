@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cpc60klg14ywg"]
+
+[ext_resource type="Script" uid="uid://b06wkrm0gq5ea" path="res://Class Scripts/object_class.gd" id="1_f1s3x"]
+[ext_resource type="Texture2D" uid="uid://bc6ijcqkwvccm" path="res://Visuals/V1/Teen's Room/road_sign.png" id="2_cyhbq"]
+
+[node name="road_sign" type="StaticBody2D" unique_id=849809709]
+script = ExtResource("1_f1s3x")
+metadata/_custom_type_script = "uid://b06wkrm0gq5ea"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1709294305]
+texture = ExtResource("2_cyhbq")

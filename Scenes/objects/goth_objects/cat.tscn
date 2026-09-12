@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://uwaoxg32e8vg"]
+
+[ext_resource type="Script" uid="uid://b06wkrm0gq5ea" path="res://Class Scripts/object_class.gd" id="1_li3qa"]
+[ext_resource type="Texture2D" uid="uid://b6oispiuqc5qt" path="res://Visuals/V1/Goth's Room/cat.png" id="2_kfe5m"]
+
+[node name="cat" type="StaticBody2D" unique_id=618133056]
+script = ExtResource("1_li3qa")
+metadata/_custom_type_script = "uid://b06wkrm0gq5ea"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2040729634]
+texture = ExtResource("2_kfe5m")
