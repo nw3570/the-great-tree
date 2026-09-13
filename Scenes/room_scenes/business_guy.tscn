@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bylcca273ecqq"]
 
-[ext_resource type="Script" uid="uid://b3bwua7nqvcl5" path="res://Scripts/scene_scripts/business_guy_room.gd" id="1_qp3g5"]
+[ext_resource type="Script" uid="uid://dm0xcypjkocdr" path="res://Scripts/scene_scripts/business_guy_room.gd" id="1_qp3g5"]
 [ext_resource type="PackedScene" uid="uid://dnck8es454nfa" path="res://Scenes/ui/character_room_ui.tscn" id="2_0xad5"]
 
 [node name="Room" type="Node2D" unique_id=707926688 node_paths=PackedStringArray("background")]

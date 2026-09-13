@@ -77,8 +77,11 @@ func _start_dia():
 
 		dia.emit_signal("send_dia", i)
 		await enter_pressed
+		
 	dia.queue_free()
-	get_tree().change_scene_to_file("res://Scenes/room_scenes/case_scene.tscn")
+	#get_tree().change_scene_to_file("res://Scenes/room_scenes/case_scene.tscn")
+	SceneManager.switch_scene_to_file(self, "res://Scenes/gameplay.tscn")
+	await SceneManager.switch_completed
 
 
 ## Called when the dialogue box finishes typing on its own.

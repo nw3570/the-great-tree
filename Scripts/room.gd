@@ -7,8 +7,9 @@ class_name Room
 #@onready var background: Sprite2D = $Background
 #@onready var character_room_ui: CharacterRoomUI = $UILayer/CharacterRoomUI
 
-#var game_context: GameContext
 var navigator: RoomNavigator
+var culprit: Gameplay.CulpritCharacter
+var game_flags: Dictionary[String, bool]
 
 func _ready() -> void:
 	pass

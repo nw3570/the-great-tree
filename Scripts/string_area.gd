@@ -6,7 +6,7 @@ func _ready() -> void:
 	input_event.connect(_on_input_event)
 
 func _on_input_event(viewport: Viewport, event: InputEvent, _shape_idx: int):
-	if event is not InputEventMouseButton || event.is_action_pressed("LMB"):
+	if event is not InputEventMouseButton || !event.is_action_pressed("LMB"):
 		return
 	
 	_audio_player.play()

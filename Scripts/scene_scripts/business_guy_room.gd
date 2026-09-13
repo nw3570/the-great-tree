@@ -23,10 +23,11 @@ func _setup_character_menu(menu: OptionsMenu):
 	# calls add_shift_dialogue inside of it.
 	# That way, when the player change rooms, the option will be present. And it
 	# will also be present right after the player has interacted with the computer
-	if true:
-		if true:
+	if culprit == Gameplay.CulpritCharacter.WILLIAM:
+		if game_flags.has("saw_william_culprit_email") && game_flags["saw_william_culprit_email"]:
 			add_shift_dialogue()
 		else:
+			# _computer.mouse_clicked.connect(_on_computer_interacted)
 			pass
 	
 	menu.add_option("Leave")
@@ -39,7 +40,7 @@ func add_shift_dialogue() -> void:
 	menu.get_option_button("Shift").pressed.connect(_shift_dialogue)
 
 func _on_computer_interacted() -> void:
-	# set flag;
+	game_flags["saw_william_culprit_email"] = true
 	add_shift_dialogue()
 
 func _spawn_character() -> void:
@@ -112,6 +113,7 @@ func _shift_dialogue():
 	
 	# Set flag that the player saw this dialogue, for the condition in the
 	# divorced's room. See "divorced_room.gd"
+	game_flags["saw_william_shift_dialogue"] = true
 
 func _leave_dialogue() -> void:
 	var dia = _dialogue_setup()
@@ -121,4 +123,4 @@ func _leave_dialogue() -> void:
 	await dia.pressed_enter
 	
 	dia.queue_free()
-	#navigator.go_to_room("corridor")
+	navigator.go_to_room("corridor")

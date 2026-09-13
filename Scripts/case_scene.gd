@@ -145,4 +145,5 @@ func _set_info_fields(char_name: String, profession: String, age: String, detail
 
 ## Returns to the corridor when the "Next" button is pressed.
 func _on_next_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/room_scenes/corridor.tscn")
+	#get_tree().change_scene_to_file("res://Scenes/room_scenes/corridor.tscn")
+	navigator.go_to_room("corridor")

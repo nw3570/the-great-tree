@@ -8,7 +8,7 @@ func _ready() -> void:
 	key_area.input_event.connect(_on_key_area_input_event)
 
 func _on_key_area_input_event(viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
-	if event is not InputEventMouseButton || event.is_action_pressed("LMB"):
+	if event is not InputEventMouseButton || !event.is_action_pressed("LMB"):
 		return
 	
 	got_key.emit()
