@@ -86,11 +86,12 @@ func _leave_dialogue():
 	new_dia.emit_signal("send_dia", "So soon? I’ll be here sweety, waiting for you")
 	await enter_pressed
 	new_dia.queue_free()
-	$AnimationPlayer.play("fade_to")
-	$BlackScreen.z_index += 10
-	$BlackScreen.visible = true
-	await $AnimationPlayer.animation_finished
-	get_tree().change_scene_to_file("res://Scenes/room_scenes/corridor.tscn")
+	#$AnimationPlayer.play("fade_to")
+	#$BlackScreen.z_index += 10
+	#$BlackScreen.visible = true
+	#await $AnimationPlayer.animation_finished
+	#get_tree().change_scene_to_file("res://Scenes/room_scenes/corridor.tscn")
+	navigator.go_to_room("corridor")
 
 func _spawn_old_character(parent : dialogue_scene, visible : bool, speak : bool) -> void:
 	var new_old : CHARACTER = OLD.instantiate()

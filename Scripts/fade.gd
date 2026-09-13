@@ -9,6 +9,7 @@ func _ready() -> void:
 	_rect.modulate.a = 0.0
 
 func fade_in():
+	show()
 	var tween := create_tween()
 	
 	tween.tween_property(_rect, "modulate:a", 1.0, duration)
@@ -19,3 +20,4 @@ func fade_out():
 	
 	tween.tween_property(_rect, "modulate:a", 0.0, duration)
 	await tween.finished
+	hide()

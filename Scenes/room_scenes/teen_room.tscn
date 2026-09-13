@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://jfhh4qk31d1q"]
 
-[ext_resource type="Script" uid="uid://cvqpriy65n3lr" path="res://Scripts/room.gd" id="1_pesnf"]
+[ext_resource type="Script" uid="uid://0jwrx3qh5aha" path="res://Scripts/scene_scripts/teen_room.gd" id="1_u4q5e"]
 [ext_resource type="Texture2D" uid="uid://dx4c6splojhv8" path="res://Visuals/V1/Teen's Room/background.png" id="2_nq0q6"]
 [ext_resource type="PackedScene" uid="uid://mlmw3aw2xdsm" path="res://Scenes/objects/teen_objects/bed.tscn" id="3_u4q5e"]
 [ext_resource type="PackedScene" uid="uid://c6igcj5a3t6pq" path="res://Scenes/objects/teen_objects/graffiti.tscn" id="4_ipbsr"]
@@ -8,12 +8,14 @@
 [ext_resource type="PackedScene" uid="uid://ds0idlyax0daw" path="res://Scenes/objects/teen_objects/poster.tscn" id="6_0qu2e"]
 [ext_resource type="PackedScene" uid="uid://cpc60klg14ywg" path="res://Scenes/objects/teen_objects/road_sign.tscn" id="7_h7o1n"]
 [ext_resource type="PackedScene" uid="uid://3xvftv4fcyqx" path="res://Scenes/objects/teen_objects/skateboard.tscn" id="8_ywn5f"]
+[ext_resource type="PackedScene" uid="uid://dnck8es454nfa" path="res://Scenes/ui/character_room_ui.tscn" id="9_u4q5e"]
 
-[node name="teen_room" type="Node2D" unique_id=1758197680]
-script = ExtResource("1_pesnf")
+[node name="teen_room" type="Node2D" unique_id=1758197680 node_paths=PackedStringArray("background")]
+script = ExtResource("1_u4q5e")
+background = NodePath("Background")
 metadata/_custom_type_script = "uid://cvqpriy65n3lr"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1974602681]
+[node name="Background" type="Sprite2D" parent="." unique_id=1974602681]
 position = Vector2(576.8889, 324.5)
 scale = Vector2(1.8027778, 1.8027776)
 texture = ExtResource("2_nq0q6")
@@ -41,3 +43,7 @@ scale = Vector2(1.803, 1.803)
 [node name="skateboard" parent="." unique_id=1720060394 instance=ExtResource("8_ywn5f")]
 position = Vector2(159, 579)
 scale = Vector2(1.803, 1.803)
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=766637095]
+
+[node name="CharacterRoomUI" parent="UILayer" unique_id=693767631 instance=ExtResource("9_u4q5e")]

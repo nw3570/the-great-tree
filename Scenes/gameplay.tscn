@@ -1,12 +1,10 @@
 [gd_scene format=3 uid="uid://de3eltg0cwkjd"]
 
-[ext_resource type="Script" uid="uid://d4aadtqtamtfk" path="res://Scripts/gameplay.gd" id="1_hf1ha"]
-[ext_resource type="Script" uid="uid://dbnkkrkohg788" path="res://Scripts/player_camera_2d.gd" id="2_wbxth"]
+[ext_resource type="Script" uid="uid://ce5dv3fwpw60t" path="res://Scripts/gameplay.gd" id="1_hf1ha"]
+[ext_resource type="PackedScene" uid="uid://ciwlrl4fscahw" path="res://Scenes/ui/fade.tscn" id="2_wbxth"]
 
 [node name="Gameplay" type="Node" unique_id=928970287]
 script = ExtResource("1_hf1ha")
 
-[node name="PlayerCamera2D" type="Camera2D" parent="." unique_id=1628826662]
-zoom = Vector2(1.1, 1.1)
-script = ExtResource("2_wbxth")
-metadata/_custom_type_script = "uid://dbnkkrkohg788"
+[node name="Fade" parent="." unique_id=1249328353 instance=ExtResource("2_wbxth")]
+duration = 1.0

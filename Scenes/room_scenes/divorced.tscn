@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b1ccptv54dwir"]
 
-[ext_resource type="Script" uid="uid://p6itq4oy3k8r" path="res://Scripts/divorced_room.gd" id="1_rr0oq"]
+[ext_resource type="Script" uid="uid://p6itq4oy3k8r" path="res://Scripts/scene_scripts/divorced_room.gd" id="1_rr0oq"]
 [ext_resource type="PackedScene" uid="uid://dnck8es454nfa" path="res://Scenes/ui/character_room_ui.tscn" id="2_rr0oq"]
 
 [node name="Room" type="Node2D" unique_id=1222827286 node_paths=PackedStringArray("background")]

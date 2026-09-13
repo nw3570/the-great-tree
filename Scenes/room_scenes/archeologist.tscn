@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://baieydr284l4l"]
 
-[ext_resource type="Script" uid="uid://cbg3ch4hxvrfp" path="res://Scripts/archeologist_room.gd" id="1_ipph2"]
+[ext_resource type="Script" uid="uid://cbg3ch4hxvrfp" path="res://Scripts/scene_scripts/archeologist_room.gd" id="1_ipph2"]
 [ext_resource type="PackedScene" uid="uid://dnck8es454nfa" path="res://Scenes/ui/character_room_ui.tscn" id="2_ipph2"]
 
 [node name="Room" type="Node2D" unique_id=1787599553 node_paths=PackedStringArray("background")]

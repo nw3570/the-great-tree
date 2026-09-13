@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://en6jpbute8di"]
 
-[ext_resource type="Script" uid="uid://ct3gxlsts0sel" path="res://Scripts/granny.gd" id="1_sd6s2"]
+[ext_resource type="Script" uid="uid://ct3gxlsts0sel" path="res://Scripts/scene_scripts/granny.gd" id="1_sd6s2"]
 [ext_resource type="Texture2D" uid="uid://c2x26hcy30q77" path="res://Visuals/V1/Grandma's Room/Grandma's Room.png" id="2_05xsy"]
 [ext_resource type="PackedScene" uid="uid://dnck8es454nfa" path="res://Scenes/ui/character_room_ui.tscn" id="3_05xsy"]
 [ext_resource type="PackedScene" uid="uid://c4heppwek0bui" path="res://Scenes/objects/old_objects/photo.tscn" id="4_4go6f"]

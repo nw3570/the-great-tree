@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c5wwrxn53xfsi"]
+
+[ext_resource type="Script" uid="uid://b06wkrm0gq5ea" path="res://Class Scripts/object_class.gd" id="1_yarqq"]
+[ext_resource type="Texture2D" uid="uid://bilpbgnkki4v8" path="res://Visuals/V1/Archeologist's Room/lock.png" id="2_7xdlq"]
+
+[node name="Lock" type="StaticBody2D" unique_id=2032583278]
+script = ExtResource("1_yarqq")
+metadata/_custom_type_script = "uid://b06wkrm0gq5ea"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=454445599]
+texture = ExtResource("2_7xdlq")
+region_enabled = true
+region_rect = Rect2(706.25, 975.171, 182.25, 249.75598)

@@ -12,11 +12,12 @@ var _history: Array[String] = []
 func set_initial_room(room_container: Node, room_id: String) -> void:
 	_current_room = _get_room_instance(room_id)
 	_current_room_id = room_id
+	_current_room.navigator = self
 	
-	#SceneManager.transition_hide()
-	room_transition_started.emit(_current_room)
+	await SceneManager.transition_hide()
 	room_container.add_child(_current_room)
-	#SceneManager.transition_reveal()
+	room_transition_started.emit(_current_room)
+	await SceneManager.transition_reveal()
 
 func go_to_room(room_id: String):
 	assert(
@@ -45,13 +46,14 @@ func _get_room_instance(room_id: String) -> Room:
 
 func _switch_room(new_room_id: String) -> void:
 	var new_room := _get_room_instance(new_room_id)
+	new_room.navigator = self
 	
-	#SceneManager.transition_hide()
-	room_transition_started.emit(new_room)
+	await SceneManager.transition_hide()
 	
 	SceneManager.switch_scene_to_node(_current_room, new_room)
 	await SceneManager.switch_completed
+	room_transition_started.emit(new_room)
 	
 	_current_room = new_room
 	_current_room_id = new_room_id
-	#SceneManager.transition_reveal()
+	await SceneManager.transition_reveal()

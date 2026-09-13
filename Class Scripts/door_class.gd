@@ -26,6 +26,7 @@ var yes_area :Area2D
 var no_area : Area2D
 var open_sound : AudioStreamPlayer2D
 var close_sound : AudioStreamPlayer2D
+var navigator: RoomNavigator
 
 # ============================================================
 # STATE
@@ -47,6 +48,7 @@ func _ready() -> void:
 	door_name = name
 	area.mouse_entered.connect(_mouse_entered)
 	area.mouse_exited.connect(_mouse_exited)
+	navigator = get_parent().navigator
 
 	yes_area = get_parent().find_child("buttons").find_child("yes").find_child("Area2D")
 	no_area = get_parent().find_child("buttons").find_child("no").find_child("Area2D")
@@ -142,7 +144,8 @@ func _teen_dialogue(dia : dialogue_scene) -> void:
 	await yes_pressed
 	open_sound.play()
 	await open_sound.finished
-	get_tree().change_scene_to_file("res://Scenes/room_scenes/teen_room.tscn")
+	#get_tree().change_scene_to_file("res://Scenes/room_scenes/teen_room.tscn")
+	navigator.go_to_room("teen_room")
 
 func _goth_dialogue(dia : dialogue_scene) -> void:
 	var new_goth : CHARACTER = GOTH.instantiate()
@@ -153,7 +156,8 @@ func _goth_dialogue(dia : dialogue_scene) -> void:
 	await yes_pressed
 	open_sound.play()
 	await open_sound.finished
-	get_tree().change_scene_to_file("res://Scenes/room_scenes/goth_rooom.tscn")
+	#get_tree().change_scene_to_file("res://Scenes/room_scenes/goth_rooom.tscn")
+	navigator.go_to_room("goth_room")
 
 func _buisness_dialogue(dia : dialogue_scene) -> void:
 	print("Buisness dialogue")
@@ -162,6 +166,7 @@ func _buisness_dialogue(dia : dialogue_scene) -> void:
 	await yes_pressed
 	open_sound.play()
 	await open_sound.finished
+	navigator.go_to_room("business_guy")
 
 func _divorced_dialogue(dia : dialogue_scene) -> void:
 	print("Divorced dialogue")
@@ -170,6 +175,7 @@ func _divorced_dialogue(dia : dialogue_scene) -> void:
 	await yes_pressed
 	open_sound.play()
 	await open_sound.finished
+	navigator.go_to_room("divorced")
 
 func _archeologist_dialogue(dia : dialogue_scene) -> void:
 	print("Archeologist dialogue")
@@ -178,6 +184,7 @@ func _archeologist_dialogue(dia : dialogue_scene) -> void:
 	await yes_pressed
 	open_sound.play()
 	await open_sound.finished
+	navigator.go_to_room("archeologist")
 	
 
 func _old_dialogue(dia : dialogue_scene) -> void:
@@ -189,4 +196,5 @@ func _old_dialogue(dia : dialogue_scene) -> void:
 	await yes_pressed
 	open_sound.play()
 	await open_sound.finished
-	get_tree().change_scene_to_file("res://Scenes/room_scenes/granny.tscn")
+	#get_tree().change_scene_to_file("res://Scenes/room_scenes/granny.tscn")
+	navigator.go_to_room("granny")

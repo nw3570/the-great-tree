@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dsa7bdvgghm1v" path="res://Scripts/corridor.gd" id="1_lmla5"]
 [ext_resource type="Texture2D" uid="uid://b17b1pw8xmcqk" path="res://Visuals/V1/Corridor.png" id="2_lmla5"]
-[ext_resource type="Script" uid="uid://bqlosof5e6wgy" path="res://Scripts/passage.gd" id="3_5xqk5"]
+[ext_resource type="Script" uid="uid://co6tirury88ug" path="res://Scripts/passage.gd" id="3_5xqk5"]
 [ext_resource type="Script" uid="uid://d0a6uw7rqwjok" path="res://Class Scripts/door_class.gd" id="5_juxwv"]
 [ext_resource type="Texture2D" uid="uid://dio1u4ke6tc6r" path="res://Visuals/V1/DialogueBox.png" id="6_57p7w"]
 [ext_resource type="Texture2D" uid="uid://cyv6r5t2ymckt" path="res://black_screen.png" id="6_k6eco"]
@@ -68,8 +68,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rh206"]
 size = Vector2(144, 38)
 
-[node name="Corridor" type="Node2D" unique_id=1489738556]
+[node name="Corridor" type="Node2D" unique_id=1489738556 node_paths=PackedStringArray("background")]
 script = ExtResource("1_lmla5")
+background = NodePath("Background")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1030798321]
 position = Vector2(576.00006, 322)
