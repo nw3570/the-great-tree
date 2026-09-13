@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx4o67sbnn024"
-path="res://.godot/imported/Guitar.png-1973e7548eb8b7ed6121b046b9dc3324.ctex"
+uid="uid://cb8mihu6nr5jq"
+path="res://.godot/imported/FamilyPhoto.png-44cffc3dfdf822e2c2c085cc5b7141ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visuals/V1/Teen's Room/Guitar.png"
-dest_files=["res://.godot/imported/Guitar.png-1973e7548eb8b7ed6121b046b9dc3324.ctex"]
+source_file="res://Visuals/V1/Karen's Room/FamilyPhoto.png"
+dest_files=["res://.godot/imported/FamilyPhoto.png-44cffc3dfdf822e2c2c085cc5b7141ae.ctex"]
 
 [params]
 

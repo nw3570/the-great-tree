@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://d01c0a4v3rpqk"]
+
+[ext_resource type="Script" uid="uid://dxath30vi4xjp" path="res://Scripts/final_choice.gd" id="1_qutg5"]
+[ext_resource type="FontFile" uid="uid://lanqoh1nlyv2" path="res://Fonts/VT323/VT323-Regular.ttf" id="2_xao3q"]
+[ext_resource type="Texture2D" uid="uid://cswuoighxygo" path="res://Visuals/V1/button.png" id="3_vmm0t"]
+
+[node name="final_choice" type="Node2D" unique_id=1823990158]
+script = ExtResource("1_qutg5")
+
+[node name="charachters" type="Node2D" parent="." unique_id=1220903524]
+visible = false
+position = Vector2(0, 27)
+
+[node name="goth" type="Button" parent="charachters" unique_id=1936693207]
+offset_left = 99.0
+offset_top = -28.0
+offset_right = 210.0
+offset_bottom = -3.0
+theme_override_colors/font_color = Color(0.2846958, 0.16709122, 0.044782385, 1)
+theme_override_fonts/font = ExtResource("2_xao3q")
+text = "Sharon Smith"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="charachters/goth" unique_id=292471082]
+show_behind_parent = true
+position = Vector2(58, 12.999999)
+scale = Vector2(1.6081256, 1.0625)
+texture = ExtResource("3_vmm0t")
+
+[node name="not_yet" type="Button" parent="charachters" unique_id=876893019]
+offset_left = 99.0
+offset_top = 2.0
+offset_right = 210.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.2846958, 0.16709122, 0.044782385, 1)
+theme_override_fonts/font = ExtResource("2_xao3q")
+text = "Nevermind"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="charachters/not_yet" unique_id=2142999665]
+show_behind_parent = true
+position = Vector2(58, 13)
+scale = Vector2(1.6081256, 1.0625)
+texture = ExtResource("3_vmm0t")
+
+[node name="BoxContainer" type="BoxContainer" parent="charachters" unique_id=2132010990]
+offset_left = -8.0
+offset_top = -114.0
+offset_right = 103.0
+offset_bottom = 85.0
+vertical = true
+
+[node name="teen" type="Button" parent="charachters/BoxContainer" unique_id=2001815116]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2846958, 0.16709122, 0.044782385, 1)
+theme_override_fonts/font = ExtResource("2_xao3q")
+text = "Jacob Masson"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="charachters/BoxContainer/teen" unique_id=1124363054]
+show_behind_parent = true
+position = Vector2(58, 12.5)
+scale = Vector2(1.6081256, 1.0625)
+texture = ExtResource("3_vmm0t")
+
+[node name="arch" type="Button" parent="charachters/BoxContainer" unique_id=1907712085]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2846958, 0.16709122, 0.044782385, 1)
+theme_override_fonts/font = ExtResource("2_xao3q")
+text = "Janet Geller"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="charachters/BoxContainer/arch" unique_id=1031937438]
+show_behind_parent = true
+position = Vector2(58, 13)
+scale = Vector2(1.6081256, 1.0625)
+texture = ExtResource("3_vmm0t")
+
+[node name="old" type="Button" parent="charachters/BoxContainer" unique_id=2065006986]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2846958, 0.16709122, 0.044782385, 1)
+theme_override_fonts/font = ExtResource("2_xao3q")
+text = "Dolores Pines"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="charachters/BoxContainer/old" unique_id=449655993]
+show_behind_parent = true
+position = Vector2(58, 13)
+scale = Vector2(1.6081256, 1.0625)
+texture = ExtResource("3_vmm0t")
+
+[node name="buisness" type="Button" parent="charachters/BoxContainer" unique_id=557712685]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2846958, 0.16709122, 0.044782385, 1)
+theme_override_fonts/font = ExtResource("2_xao3q")
+text = " William Johnson"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="charachters/BoxContainer/buisness" unique_id=1203701848]
+show_behind_parent = true
+position = Vector2(58, 12)
+scale = Vector2(1.6081256, 1.0625)
+texture = ExtResource("3_vmm0t")
+
+[node name="divorced" type="Button" parent="charachters/BoxContainer" unique_id=162465577]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2846958, 0.16709122, 0.044782385, 1)
+theme_override_fonts/font = ExtResource("2_xao3q")
+text = "Karen Meyers"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="charachters/BoxContainer/divorced" unique_id=1557565304]
+show_behind_parent = true
+position = Vector2(58.000008, 13.000002)
+scale = Vector2(1.6081256, 1.0625)
+texture = ExtResource("3_vmm0t")
+
+[node name="initial_choice" type="Node2D" parent="." unique_id=1739794798]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="initial_choice" unique_id=1125396116]
+offset_right = 53.0
+offset_bottom = 54.0
+
+[node name="yes" type="Button" parent="initial_choice/VBoxContainer" unique_id=1107738994]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.28627452, 0.16862746, 0.043137256, 1)
+theme_override_fonts/font = ExtResource("2_xao3q")
+text = "Yes"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="initial_choice/VBoxContainer/yes" unique_id=663961684]
+show_behind_parent = true
+position = Vector2(26.999998, 13)
+scale = Vector2(0.84375006, 1.125)
+texture = ExtResource("3_vmm0t")
+
+[node name="no" type="Button" parent="initial_choice/VBoxContainer" unique_id=2028276918]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.28627452, 0.16862746, 0.043137256, 1)
+theme_override_fonts/font = ExtResource("2_xao3q")
+text = "Not yet"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="initial_choice/VBoxContainer/no" unique_id=122767886]
+show_behind_parent = true
+position = Vector2(27, 13)
+scale = Vector2(0.84375, 1.125)
+texture = ExtResource("3_vmm0t")

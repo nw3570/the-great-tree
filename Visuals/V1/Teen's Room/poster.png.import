@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dc622i4h2ndoj"
-path="res://.godot/imported/poster.png-9d1b054148c3bd770e888bd3baa8e87c.ctex"
+path="res://.godot/imported/Poster.png-bee9e7574a91fb10aac668548fed719c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visuals/V1/Teen's Room/poster.png"
-dest_files=["res://.godot/imported/poster.png-9d1b054148c3bd770e888bd3baa8e87c.ctex"]
+source_file="res://Visuals/V1/Teen's Room/Poster.png"
+dest_files=["res://.godot/imported/Poster.png-bee9e7574a91fb10aac668548fed719c.ctex"]
 
 [params]
 

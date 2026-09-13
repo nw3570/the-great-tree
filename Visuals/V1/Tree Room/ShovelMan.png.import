@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx4o67sbnn024"
-path="res://.godot/imported/Guitar.png-1973e7548eb8b7ed6121b046b9dc3324.ctex"
+uid="uid://c6wbrqlf1ncnw"
+path="res://.godot/imported/ShovelMan.png-9c7dcc23def67d07dda945a27ec4c138.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visuals/V1/Teen's Room/Guitar.png"
-dest_files=["res://.godot/imported/Guitar.png-1973e7548eb8b7ed6121b046b9dc3324.ctex"]
+source_file="res://Visuals/V1/Tree Room/ShovelMan.png"
+dest_files=["res://.godot/imported/ShovelMan.png-9c7dcc23def67d07dda945a27ec4c138.ctex"]
 
 [params]
 

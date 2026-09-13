@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://d3vymdlpt7wap"]
+
+[ext_resource type="Texture2D" uid="uid://4i0g4e2lef03" path="res://Visuals/V1/FileCases/paper.png" id="1_fg2qe"]
+[ext_resource type="Script" uid="uid://b3spwlm0qlbin" path="res://info.gd" id="1_ohlig"]
+[ext_resource type="FontFile" uid="uid://lanqoh1nlyv2" path="res://Fonts/VT323/VT323-Regular.ttf" id="2_tk7c1"]
+[ext_resource type="Texture2D" uid="uid://r7tfkfhn3c5y" path="res://Visuals/V1/FileCases/x_button.png" id="4_apbm5"]
+
+[node name="info" type="Node2D" unique_id=1180232798]
+script = ExtResource("1_ohlig")
+
+[node name="Paper" type="Sprite2D" parent="." unique_id=1938520283]
+position = Vector2(838.99994, 312.99997)
+scale = Vector2(5.1666665, 5.1666665)
+texture = ExtResource("1_fg2qe")
+
+[node name="name" type="Label" parent="." unique_id=2128679387]
+offset_left = 816.0
+offset_top = 77.0
+offset_right = 1023.0
+offset_bottom = 125.0
+theme_override_colors/font_color = Color(0.25771597, 0.11715954, 0.01893359, 1)
+theme_override_fonts/font = ExtResource("2_tk7c1")
+theme_override_font_sizes/font_size = 47
+text = "Jacob Mason"
+
+[node name="profession" type="Label" parent="." unique_id=536510039]
+offset_left = 814.0
+offset_top = 138.0
+offset_right = 1021.0
+offset_bottom = 186.0
+theme_override_colors/font_color = Color(0.25771597, 0.11715954, 0.01893359, 1)
+theme_override_fonts/font = ExtResource("2_tk7c1")
+theme_override_font_sizes/font_size = 39
+text = "Teenager"
+
+[node name="age" type="Label" parent="." unique_id=1053419608]
+offset_left = 830.0
+offset_top = 194.0
+offset_right = 1037.0
+offset_bottom = 243.0
+theme_override_colors/font_color = Color(0.25771597, 0.11715954, 0.01893359, 1)
+theme_override_fonts/font = ExtResource("2_tk7c1")
+theme_override_font_sizes/font_size = 48
+text = "19"
+
+[node name="details" type="Label" parent="." unique_id=997785946]
+offset_left = 640.0
+offset_top = 270.0
+offset_right = 1064.0
+offset_bottom = 579.0
+theme_override_colors/font_color = Color(0.25771597, 0.11715954, 0.01893359, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_tk7c1")
+theme_override_font_sizes/font_size = 33
+text = "Left home because his parents kicked him out. Has quite an attitude. Was the last one to arrive. He occupies the first room
+at the left of the hallway."
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=1312721853]
+offset_left = 512.0
+offset_top = 14.000002
+offset_right = 538.0
+offset_bottom = 40.0
+scale = Vector2(3.425778, 3.425778)
+icon = ExtResource("4_apbm5")
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -179,6 +179,7 @@ func generate_collision() -> CollisionPolygon2D:
 	if polygons.size() > 0:
 		var collision = CollisionPolygon2D.new()
 		collision.polygon = polygons[0]
+		collision.scale = sprite.scale
 		collision.position = (collision.position - sprite.texture.get_size()) / 2
 		return collision
 	return null

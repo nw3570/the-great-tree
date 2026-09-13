@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkuyud8v60656"
-path="res://.godot/imported/skateboard.png-316c358a03d8a0a1666a7f251d931301.ctex"
+path="res://.godot/imported/Skateboard.png-9a402191a99c18be32f45a87c35da041.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visuals/V1/Teen's Room/skateboard.png"
-dest_files=["res://.godot/imported/skateboard.png-316c358a03d8a0a1666a7f251d931301.ctex"]
+source_file="res://Visuals/V1/Teen's Room/Skateboard.png"
+dest_files=["res://.godot/imported/Skateboard.png-9a402191a99c18be32f45a87c35da041.ctex"]
 
 [params]
 

@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://cqasd5r7txfid"]
+
+[ext_resource type="Script" uid="uid://cfth57c1hir6n" path="res://Scripts/case_scene.gd" id="1_4rra3"]
+[ext_resource type="Texture2D" uid="uid://b6jgilf05dt24" path="res://Visuals/V1/FileCases/Slice 1.png" id="2_4rra3"]
+[ext_resource type="Script" uid="uid://b06wkrm0gq5ea" path="res://Class Scripts/object_class.gd" id="2_qttmn"]
+[ext_resource type="Texture2D" uid="uid://b88wgiw7oy4uj" path="res://Visuals/V1/FileCases/Slice 2.png" id="3_qttmn"]
+[ext_resource type="Texture2D" uid="uid://bvh1qhfgepstl" path="res://Visuals/V1/FileCases/Slice 3.png" id="4_y6rre"]
+[ext_resource type="Texture2D" uid="uid://bqgo2flwb2qt4" path="res://Visuals/V1/FileCases/Slice 4.png" id="5_tsmnt"]
+[ext_resource type="Texture2D" uid="uid://cg65c7xtp5hc2" path="res://Visuals/V1/FileCases/Slice 5.png" id="6_aimaj"]
+[ext_resource type="PackedScene" uid="uid://d3vymdlpt7wap" path="res://info.tscn" id="7_ohm6m"]
+[ext_resource type="Texture2D" uid="uid://b5h58wv034ndj" path="res://Visuals/V1/FileCases/arrow_button.png" id="9_qttmn"]
+
+[node name="case_files" type="Node2D" unique_id=1099224329]
+script = ExtResource("1_4rra3")
+metadata/_custom_type_script = "uid://cvqpriy65n3lr"
+
+[node name="jacob" type="StaticBody2D" parent="." unique_id=616123871 groups=["case_files"]]
+position = Vector2(87, 80)
+scale = Vector2(1.9573858, 1.9573858)
+script = ExtResource("2_qttmn")
+metadata/_custom_type_script = "uid://b06wkrm0gq5ea"
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="jacob" unique_id=1392199034]
+texture = ExtResource("2_4rra3")
+
+[node name="sharon" type="StaticBody2D" parent="." unique_id=1723886754 groups=["case_files"]]
+position = Vector2(403, 248)
+scale = Vector2(1.9573858, 1.9573858)
+script = ExtResource("2_qttmn")
+metadata/_custom_type_script = "uid://b06wkrm0gq5ea"
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="sharon" unique_id=990961070]
+texture = ExtResource("3_qttmn")
+
+[node name="william" type="StaticBody2D" parent="." unique_id=1239691427 groups=["case_files"]]
+position = Vector2(268, 254)
+scale = Vector2(1.9573858, 1.9573858)
+script = ExtResource("2_qttmn")
+metadata/_custom_type_script = "uid://b06wkrm0gq5ea"
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="william" unique_id=1559720521]
+texture = ExtResource("4_y6rre")
+
+[node name="karen" type="StaticBody2D" parent="." unique_id=908918022 groups=["case_files"]]
+position = Vector2(129, 301)
+scale = Vector2(1.9573858, 1.9573858)
+script = ExtResource("2_qttmn")
+metadata/_custom_type_script = "uid://b06wkrm0gq5ea"
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="karen" unique_id=714454097]
+texture = ExtResource("5_tsmnt")
+
+[node name="janet" type="StaticBody2D" parent="." unique_id=55505339 groups=["case_files"]]
+position = Vector2(330, 83)
+scale = Vector2(1.9573858, 1.9573858)
+script = ExtResource("2_qttmn")
+metadata/_custom_type_script = "uid://b06wkrm0gq5ea"
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="janet" unique_id=354206332]
+texture = ExtResource("6_aimaj")
+
+[node name="dolores" type="StaticBody2D" parent="." unique_id=1499967319 groups=["case_files"]]
+position = Vector2(200, 66)
+scale = Vector2(1.9573858, 1.9573858)
+script = ExtResource("2_qttmn")
+metadata/_custom_type_script = "uid://b06wkrm0gq5ea"
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="dolores" unique_id=135909900]
+texture = ExtResource("2_4rra3")
+
+[node name="info" parent="." unique_id=1180232798 instance=ExtResource("7_ohm6m")]
+visible = false
+
+[node name="Area2D" type="Area2D" parent="." unique_id=898223516]
+
+[node name="next_button" type="Button" parent="." unique_id=405867892]
+offset_left = 1001.0
+offset_top = 503.0
+offset_right = 1123.0
+offset_bottom = 625.0
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="next_button" unique_id=1892002944]
+position = Vector2(63.000008, 64.00001)
+scale = Vector2(6.630874, 6.630874)
+texture = ExtResource("9_qttmn")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="pressed" from="next_button" to="." method="_on_next_button_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx4o67sbnn024"
-path="res://.godot/imported/Guitar.png-1973e7548eb8b7ed6121b046b9dc3324.ctex"
+uid="uid://d0fvdt7hv7jjy"
+path="res://.godot/imported/DinoToys.png-146e7a1dda04f6cecaf7827a3554a0e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visuals/V1/Teen's Room/Guitar.png"
-dest_files=["res://.godot/imported/Guitar.png-1973e7548eb8b7ed6121b046b9dc3324.ctex"]
+source_file="res://Visuals/V1/Janet's Room/DinoToys.png"
+dest_files=["res://.godot/imported/DinoToys.png-146e7a1dda04f6cecaf7827a3554a0e1.ctex"]
 
 [params]
 

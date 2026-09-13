@@ -30,6 +30,7 @@ game_object=""
 object_sprite=""
 character=""
 dia=""
+case_files=""
 
 [input]
 

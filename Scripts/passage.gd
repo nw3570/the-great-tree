@@ -3,11 +3,19 @@ extends Area2D
 ## The destination that the door leads to.
 @export var destination_room_id: String
 
-func _ready() -> void:
-	pass
+var in_area : bool = false
 
-func _on_input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
-	if event is not InputEventMouseButton && !event.is_action_pressed("LMB"):
-		return
-	
-	#go_to_room(destination_room_id)
+func _ready() -> void:
+	mouse_entered.connect(_entered)
+	mouse_exited.connect(_exited)
+
+func _entered():
+	in_area = true
+
+func _exited():
+	in_area = false
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("LMB"):
+		if in_area:
+			get_tree().change_scene_to_file("res://Scenes/room_scenes/tree_room.tscn")

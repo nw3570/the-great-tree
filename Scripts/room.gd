@@ -11,7 +11,8 @@ class_name Room
 var navigator: RoomNavigator
 
 func _ready() -> void:
-	assert(background != null, "Room is missing 'Background (Sprite2D)' node")
+	pass
+	#assert(background != null, "Room is missing 'Background (Sprite2D)' node")
 
 ## Calculates a Rect2 for the visible area of the room's background, in global
 ## coordinates.

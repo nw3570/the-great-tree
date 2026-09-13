@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx4o67sbnn024"
-path="res://.godot/imported/Guitar.png-1973e7548eb8b7ed6121b046b9dc3324.ctex"
+uid="uid://b12puhyklqdm5"
+path="res://.godot/imported/Paintings.png-e03932430ba5ecdc5b115aabc134dabf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visuals/V1/Teen's Room/Guitar.png"
-dest_files=["res://.godot/imported/Guitar.png-1973e7548eb8b7ed6121b046b9dc3324.ctex"]
+source_file="res://Visuals/V1/Sharon's Room/Paintings.png"
+dest_files=["res://.godot/imported/Paintings.png-e03932430ba5ecdc5b115aabc134dabf.ctex"]
 
 [params]
 
