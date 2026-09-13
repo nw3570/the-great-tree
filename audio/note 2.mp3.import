@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://biernbx0fxfbi"
+path="res://.godot/imported/note 2.mp3-3d2a9542001159b7fc0769929d9aba69.mp3str"
+
+[deps]
+
+source_file="res://audio/note 2.mp3"
+dest_files=["res://.godot/imported/note 2.mp3-3d2a9542001159b7fc0769929d9aba69.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://xf47o1tuhupn"]
+
+[ext_resource type="Script" uid="uid://d2grsgggkrwm3" path="res://Scripts/guitar_close_up.gd" id="1_jq5yf"]
+[ext_resource type="Texture2D" uid="uid://ds8pt054k8hl0" path="res://Visuals/V1/Teen's Room/guitar-closeup.png" id="1_k7y0x"]
+[ext_resource type="Script" uid="uid://d4dmc5tahvoa8" path="res://Scripts/string_area.gd" id="2_pp37h"]
+[ext_resource type="AudioStream" uid="uid://dmb4xojlgoj5" path="res://audio/note 3.mp3" id="4_dhchn"]
+[ext_resource type="AudioStream" uid="uid://biernbx0fxfbi" path="res://audio/note 2.mp3" id="5_5ib83"]
+[ext_resource type="AudioStream" uid="uid://y511jai6fh82" path="res://audio/note 1.mp3" id="6_374pp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qf6i"]
+size = Vector2(142.25, 247)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jd0cd"]
+size = Vector2(25.352112, 1392)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jq5yf"]
+size = Vector2(22.53534, 1194)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ie6a"]
+size = Vector2(17, 140)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pp37h"]
+size = Vector2(25.35205, 1391)
+
+[node name="GuitarCloseUp" type="Node2D" unique_id=1668508839]
+script = ExtResource("1_jq5yf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1075324728]
+position = Vector2(506, 326.50003)
+scale = Vector2(0.355, 0.403125)
+texture = ExtResource("1_k7y0x")
+
+[node name="KeyArea" type="Area2D" parent="Sprite2D" unique_id=1045359643]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/KeyArea" unique_id=1420389562]
+position = Vector2(153.875, 187)
+shape = SubResource("RectangleShape2D_4qf6i")
+
+[node name="StringArea3" type="Area2D" parent="Sprite2D" unique_id=1118839907]
+script = ExtResource("2_pp37h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StringArea3" unique_id=1024845868]
+position = Vector2(23.943604, -105)
+scale = Vector2(1, 0.9999998)
+shape = SubResource("RectangleShape2D_jd0cd")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sprite2D/StringArea3" unique_id=375747635]
+stream = ExtResource("6_374pp")
+
+[node name="StringArea" type="Area2D" parent="Sprite2D" unique_id=1760312721]
+script = ExtResource("2_pp37h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StringArea" unique_id=2096410912]
+position = Vector2(-138.02844, -5)
+scale = Vector2(1, 0.9999999)
+shape = SubResource("RectangleShape2D_jq5yf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StringArea" unique_id=250442320]
+position = Vector2(-135.5, -730)
+shape = SubResource("RectangleShape2D_1ie6a")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sprite2D/StringArea" unique_id=638746820]
+stream = ExtResource("4_dhchn")
+
+[node name="StringArea2" type="Area2D" parent="Sprite2D" unique_id=1029081540]
+script = ExtResource("2_pp37h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StringArea2" unique_id=1772676353]
+position = Vector2(-40.845093, -104.5)
+scale = Vector2(1, 0.9999999)
+shape = SubResource("RectangleShape2D_pp37h")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sprite2D/StringArea2" unique_id=1830734506]
+stream = ExtResource("5_5ib83")

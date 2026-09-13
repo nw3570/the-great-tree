@@ -1,11 +1,18 @@
 [gd_scene format=3 uid="uid://cxdmg7st1aosf"]
 
-[ext_resource type="Script" uid="uid://dtdhkqpxhcd4q" path="res://Scripts/office.gd" id="1_tbtw1"]
+[ext_resource type="Script" uid="uid://2f26emk0x8hi" path="res://Scripts/office.gd" id="1_tbtw1"]
+[ext_resource type="Theme" uid="uid://dyp47s2ifeis0" path="res://Themes/game_theme.tres" id="2_ark4m"]
 
-[node name="Office" type="Node2D" unique_id=510607398]
+[node name="Office" type="Node2D" unique_id=510607398 node_paths=PackedStringArray("background")]
 script = ExtResource("1_tbtw1")
-metadata/_custom_type_script = "uid://cxy6ct5krn8a3"
+background = NodePath("Background")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1326855395]
 
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=1405730431]
+visible = false
+
+[node name="Advance" type="Button" parent="UILayer" unique_id=653359166]
+offset_right = 8.0
+offset_bottom = 8.0
+theme = ExtResource("2_ark4m")

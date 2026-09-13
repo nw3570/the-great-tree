@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://yxgegnunwq5u"]
+
+[ext_resource type="Script" uid="uid://b06wkrm0gq5ea" path="res://Class Scripts/object_class.gd" id="1_61qyt"]
+[ext_resource type="Texture2D" uid="uid://b6jgilf05dt24" path="res://Visuals/V1/FileCases/Slice 1.png" id="2_nyh1k"]
+
+[node name="OBJECT" type="StaticBody2D" unique_id=1552707101]
+script = ExtResource("1_61qyt")
+metadata/_custom_type_script = "uid://b06wkrm0gq5ea"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2117909665]
+position = Vector2(170, 186)
+scale = Vector2(4.359375, 4.4375)
+texture = ExtResource("2_nyh1k")
